@@ -1,0 +1,21 @@
+IdentityFile /Users/mattogram/.ssh/REPSandCoAdmin.pem
+Host k
+     HostName ec2-18-217-103-171.us-east-2.compute.amazonaws.com
+     User ubuntu
+     IdentityFile ~/.ssh/REPSandCoAdmin.pem
+Host mf
+    HostName ec2-18-217-103-171.us-east-2.compute.amazonaws.com
+    User ubuntu
+    IdentityFile ~/.ssh/REPSandCoAdmin.pem
+Host skyscraper
+    HostName ec2-18-217-103-171.us-east-2.compute.amazonaws.com
+    User ubuntu
+    IdentityFile ~/.ssh/REPSandCoAdmin.pem
+Host etljobs
+    HostName ec2-18-217-103-171.us-east-2.compute.amazonaws.com
+    User ubuntu
+    IdentityFile ~/.ssh/REPSandCoAdmin.pem
+Host kallax
+    HostName 10.117.9.176
+    User kallax
+    IdentityFile ~/.ssh/id_rsa

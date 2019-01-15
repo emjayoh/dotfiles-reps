@@ -1,0 +1,21 @@
+- clean: ['~']
+
+- link:
+    ~/.profile: profile
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.chunkwmrc: chunkwmrc
+    ~/.gitconfig: gitconfig
+    ~/.hyper.js: hyper.js
+    ~/.skhdrc: skhdrc
+    ~/.spacemacs: spacemacs
+    ~/.ssh/config:
+        path: ssh/config
+        create: true
+    ~/.zprofile: zprofile
+    ~/.zshrc: zshrc
+    ~/.config/iterm2:
+        path: config/iterm2/
+        create: true
+
+
