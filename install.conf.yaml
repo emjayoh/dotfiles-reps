@@ -18,4 +18,9 @@
         path: config/iterm2/
         create: true
 
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
 
+- brewfile:
+    # This accepts the same options as `brew bundle` command:
+    file: Brewfile
