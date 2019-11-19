@@ -71,3 +71,12 @@ fi
 #export BASHISH_CP BASHISH_OLDPATH TTY ENV                       ## line added by bashish
 #. "$BASHISHDIR/main/prompt/sh/init"                             ## line added by bashish
 #fi                                                              ## line added by bashish
+
+##
+# Your previous /Users/mattogram/.zprofile file was backed up as /Users/mattogram/.zprofile.macports-saved_2019-11-11_at_12:56:08
+##
+
+# MacPorts Installer addition on 2019-11-11_at_12:56:08: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
