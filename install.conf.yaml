@@ -1,22 +1,22 @@
-- clean: ['~']
+- defaults:
+    link:
+      create: true
+      relink: true
+- clean: ['~', '~/.config']
 
 - link:
-    ~/.profile: profile
-    ~/.bash_profile: bash_profile
-    ~/.bashrc: bashrc
-    ~/.chunkwmrc: chunkwmrc
-    ~/.gitconfig: gitconfig
-    ~/.hyper.js: hyper.js
-    ~/.skhdrc: skhdrc
-    ~/.spacemacs: spacemacs
-    ~/.ssh/config:
-        path: ssh/config
-        create: true
-    ~/.zprofile: zprofile
-    ~/.zshrc: zshrc
-    ~/.config/iterm2:
-        path: config/iterm2/
-        create: true
+    ~/.profile:
+    ~/.bash_profile:
+    ~/.bashrc:
+    ~/.chunkwmrc:
+    ~/.gitconfig:
+    ~/.hyper.js:
+    ~/.skhdrc:
+    ~/.spacemacs:
+    ~/.ssh/config: ssh/config
+    ~/.zprofile:
+    ~/.zshrc:
+    ~/.config/iterm2: config/iterm2/
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

@@ -3,163 +3,161 @@
 // See https://hyper.is#cfg for all currently supported options.
 
 module.exports = {
-  config: {
-    // choose either `'stable'` for receiving highly polished,
-    // or `'canary'` for less polished but more frequent updates
-    updateChannel: "canary",
+    config: {
+	// choose either `'stable'` for receiving highly polished,
+	// or `'canary'` for less polished but more frequent updates
+	updateChannel: 'stable',
 
-    opacity: {
-      focus: 0.9,
-      blur: 0.5
-    },
+	// default font size in pixels for all tabs
+	fontSize: 12,
 
-    // default font size in pixels for all tabs
-    fontSize: 14,
+	// font family with optional fallbacks
+	fontFamily: '"OpenDyslexicMono Nerd Font Mono", "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
-    // font family with optional fallbacks
-    fontFamily:
-      '"Hack Nerd Font", "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+	// default font weight: 'normal' or 'bold'
+	fontWeight: 'normal',
 
-    // default font weight: 'normal' or 'bold'
-    fontWeight: "normal",
+	// font weight for bold characters: 'normal' or 'bold'
+	fontWeightBold: 'bold',
 
-    // font weight for bold characters: 'normal' or 'bold'
-    fontWeightBold: "bold",
+	// line height as a relative unit
+	lineHeight: 1,
 
-    // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-    cursorColor: "rgba(248,28,229,0.8)",
+	// letter spacing as a relative unit
+	letterSpacing: 0,
 
-    // terminal text color under BLOCK cursor
-    cursorAccentColor: "#000",
+	// terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
+	cursorColor: 'rgba(248,28,229,0.8)',
 
-    // `'BEAM'` for |, `'UNDERLINE'` for _, `'BLOCK'` for █
-    cursorShape: "BLOCK",
+	// terminal text color under BLOCK cursor
+	cursorAccentColor: '#000',
 
-    // set to `true` (without backticks and without quotes) for blinking cursor
-    cursorBlink: true,
+	// `'BEAM'` for |, `'UNDERLINE'` for _, `'BLOCK'` for █
+	cursorShape: 'BLOCK',
 
-    // color of the text
-    foregroundColor: "#fff",
+	// set to `true` (without backticks and without quotes) for blinking cursor
+	cursorBlink: false,
 
-    // terminal background color
-    // opacity is only supported on macOS
-    backgroundColor: "#000",
+	// color of the text
+	foregroundColor: '#fff',
 
-    // terminal selection color
-    selectionColor: "rgba(248,28,229,0.3)",
+	// terminal background color
+	// opacity is only supported on macOS
+	backgroundColor: '#000',
 
-    // border color (window, tabs)
-    borderColor: "#333",
+	// terminal selection color
+	selectionColor: 'rgba(248,28,229,0.3)',
 
-    // custom CSS to embed in the main window
-    css: "",
+	// border color (window, tabs)
+	borderColor: '#333',
 
-    // custom CSS to embed in the terminal window
-    termCSS: "",
+	// custom CSS to embed in the main window
+	css: '',
 
-    // if you're using a Linux setup which show native menus, set to false
-    // default: `true` on Linux, `true` on Windows, ignored on macOS
-    showHamburgerMenu: "",
+	// custom CSS to embed in the terminal window
+	termCSS: '',
 
-    // set to `false` (without backticks and without quotes) if you want to hide the minimize, maximize and close buttons
-    // additionally, set to `'left'` if you want them on the left, like in Ubuntu
-    // default: `true` (without backticks and without quotes) on Windows and Linux, ignored on macOS
-    showWindowControls: false,
+	// set custom startup directory (must be an absolute path)
+	workingDirectory: '',
 
-    // custom padding (CSS format, i.e.: `top right bottom left`)
-    padding: "10px 10px 10px 10px",
+	// if you're using a Linux setup which show native menus, set to false
+	// default: `true` on Linux, `true` on Windows, ignored on macOS
+	showHamburgerMenu: '',
 
-    // the full list. if you're going to provide the full color palette,
-    // including the 6 x 6 color cubes and the grayscale map, just provide
-    // an array here instead of a color map object
-    colors: {
-      black: "#000000",
-      red: "#C51E14",
-      green: "#1DC121",
-      yellow: "#C7C329",
-      blue: "#0A2FC4",
-      magenta: "#C839C5",
-      cyan: "#20C5C6",
-      white: "#C7C7C7",
-      lightBlack: "#686868",
-      lightRed: "#FD6F6B",
-      lightGreen: "#67F86F",
-      lightYellow: "#FFFA72",
-      lightBlue: "#6A76FB",
-      lightMagenta: "#FD7CFC",
-      lightCyan: "#68FDFE",
-      lightWhite: "#FFFFFF"
-    },
+	// set to `false` (without backticks and without quotes) if you want to hide the minimize, maximize and close buttons
+	// additionally, set to `'left'` if you want them on the left, like in Ubuntu
+	// default: `true` (without backticks and without quotes) on Windows and Linux, ignored on macOS
+	showWindowControls: '',
 
-    // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
-    // if left empty, your system's login shell will be used by default
-    //
-    // Windows
-    // - Make sure to use a full path if the binary name doesn't work
-    // - Remove `--login` in shellArgs
-    //
-    // Bash on Windows
-    // - Example: `C:\\Windows\\System32\\bash.exe`
-    //
-    // PowerShell on Windows
-    // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
-    shell: "/bin/zsh",
+	// custom padding (CSS format, i.e.: `top right bottom left`)
+	padding: '12px 14px',
 
-    // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
-    // by default `['--login']` will be used
-    shellArgs: ["--login"],
+	// the full list. if you're going to provide the full color palette,
+	// including the 6 x 6 color cubes and the grayscale map, just provide
+	// an array here instead of a color map object
+	colors: {
+	    black: '#000000',
+	    red: '#C51E14',
+	    green: '#1DC121',
+	    yellow: '#C7C329',
+	    blue: '#0A2FC4',
+	    magenta: '#C839C5',
+	    cyan: '#20C5C6',
+	    white: '#C7C7C7',
+	    lightBlack: '#686868',
+	    lightRed: '#FD6F6B',
+	    lightGreen: '#67F86F',
+	    lightYellow: '#FFFA72',
+	    lightBlue: '#6A76FB',
+	    lightMagenta: '#FD7CFC',
+	    lightCyan: '#68FDFE',
+	    lightWhite: '#FFFFFF',
+	    limeGreen: '#32CD32',
+	    lightCoral: '#F08080',
+	},
 
-    // for environment variables
-    env: {},
+	// the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
+	// if left empty, your system's login shell will be used by default
+	//
+	// Windows
+	// - Make sure to use a full path if the binary name doesn't work
+	// - Remove `--login` in shellArgs
+	//
+	// Windows Subsystem for Linux (WSL) - previously Bash on Windows
+	// - Example: `C:\\Windows\\System32\\wsl.exe`
+	//
+	// Git-bash on Windows
+	// - Example: `C:\\Program Files\\Git\\bin\\bash.exe`
+	//
+	// PowerShell on Windows
+	// - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
+	//
+	// Cygwin
+	// - Example: `C:\\cygwin64\\bin\\bash.exe`
+	//
+	// Git Bash
+	// - Example: `C:\\Program Files\\Git\\git-cmd.exe`
+	// Then Add `--command=usr/bin/bash.exe` to shellArgs
+	shell: '/bin/zsh',
 
-    // set to `false` for no bell
-    bell: "SOUND",
+	// for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
+	// by default `['--login']` will be used
+	shellArgs: ['--login'],
 
-    // if `true` (without backticks and without quotes), selected text will automatically be copied to the clipboard
-    copyOnSelect: false,
+	// for environment variables
+	env: {},
 
-    // if `true` (without backticks and without quotes), hyper will be set as the default protocol client for SSH
-    defaultSSHApp: true,
-    backgroundImage: "/Users/mattogram/Pictures/wallhaven/wallhaven-610930.jpg",
-    transparentBg: {
-      WebkitFilter: "blur(5px)",
-      opacity: "0.3"
-    },
-    hyperTransparentDynamic: {
-      alpha: 0.1 // default 50%
-    },
-    hyperTabs: {
-      trafficButtons: true,
-      tabIconsColored: true,
-      border: false,
-      closeAlign: "right"
-    },
-    // hyperPostprocessing: {
-    // defaults to `${HOME}/.hyper-postprocessing.js`
-    // entry: '/Users/mattogram/hyper-postprocessing/examples/effects/postprocessing-demo/index.js'
-    // },
-    summon: {
-      hideDock: false,
-      hideOnBlur: false,
-      hotkey: "Alt+Cmd+H"
-    },
-    // if `true` (without backticks and without quotes), on right click selected text will be copied or pasted if no
-    // selection is present (`true` by default on Windows and disables the context menu feature)
-    // quickEdit: true,
+	// Supported Options:
+	//  1. 'SOUND' -> Enables the bell as a sound
+	//  2. false: turns off the bell
+	bell: 'SOUND',
 
-    // URL to custom bell
-    // bellSoundURL: 'http://example.com/bell.mp3',
-    // for advanced config flags please refer to https://hyper.is/#cfg
-    //   summon: {
-    // #  hotkey: 'Cmd+`'
-    // },
-    hypercwd: {
-      initialWorkingDirectory: "~/Projects/reps/www/konami.reps"
-    },
-    hyperStatusLine: {
-      dirtyColor: "salmon",
-      aheadColor: "ivory",
-      footerTransparent: true
+	// An absolute file path to a sound file on the machine.
+	// bellSoundURL: '/path/to/sound/file',
+
+	// if `true` (without backticks and without quotes), selected text will automatically be copied to the clipboard
+	copyOnSelect: false,
+
+	// if `true` (without backticks and without quotes), hyper will be set as the default protocol client for SSH
+	defaultSSHApp: true,
+
+	// if `true` (without backticks and without quotes), on right click selected text will be copied or pasted if no
+	// selection is present (`true` by default on Windows and disables the context menu feature)
+	quickEdit: false,
+
+	// choose either `'vertical'`, if you want the column mode when Option key is hold during selection (Default)
+	// or `'force'`, if you want to force selection regardless of whether the terminal is in mouse events mode
+	// (inside tmux or vim with mouse mode enabled for example).
+	macOptionSelectionMode: 'vertical',
+
+	// Whether to use the WebGL renderer. Set it to false to use canvas-based
+	// rendering (slower, but supports transparent backgrounds)
+	webGLRenderer: false,
+
+	// if `true` (without backticks and without quotes), Hyper will ignore ligatures provided by some fonts
+	disableLigatures: false,
+
+	// for advanced config flags please refer to https://hyper.is/#cfg
     },
 
     // a list of plugins to fetch and install from npm
@@ -168,103 +166,11 @@ module.exports = {
     //   `hyperpower`
     //   `@company/project`
     //   `project#1.0.1`
-
-    // INACTIVE PLUGINS:
-    // "hyper-dracula",
-    // "hyper-dark-scrollbar",
-    // "hyper-cat-cursor",
-    // "hypergravity",
-    // "hyper-postprocessing",
-    // "hyper-electron-highlighter",
-    // "hyper-tabs-enhanced",
-    // "hyper-chesterish",
-    // "hyper-transparent-dynamic",
-    // 'hyper-transparent',
-    // "hyper-snazzy-unfaded",
-    // "hyper-transparent-bg",
-    // "hyper-vsplit-fix",h
-    // "hyper-letters",
-    // "hyperocean",
-    // "hyper-night-owl",
-    // "hyper-whimsy",
-    // "hyper-electron-highlighter",
-    // "hyper-flat",
-    // "hyper-chesterish"
-    // "hyperline",
-    // "hyperminimal",
-    // "hyper-fading-scrollbar",
-    // "hyper-opacity",
-    // "hyper-postprocessing",
-    // "hyperterm-base-16-ocean",
-    // "hyperterm-cobalt2-theme",
-    // "hyperterm-colors",
-    // "hyperterm-dark-fusion",
-    // "hyperterm-new-moon-theme",
-    // "hyperterm-panda",
-    // "hyperterm-retro",
-    // "hypermaterial-vibrancy",
-    // "hyper-midnight",
-    // "hyper-solarized-dark-transparent",
-    // "hyper-unity",
-    // "hyper-phallus",
-    // "hyper-material-vibrancy",
-    // "hyperterm-material-spacegray",
-    // "hyper-dark-vibrancy",
-    // "hyper-loved",
-    // "hyper-pinker",
-    // "hyperterm-gooey",
-    // "hyperlinks",
-    // "hyper-solarized-dark-highcontrast",
-    // "hypertheme",
-    // "hyper-solarized-dark-vibrancy",
-    // "hyper-tab-icons",
-    // "hyper-sierra-vibrancy",
-    // "hyperterm-cursor",
-    // "hyperterm-material-vibracy",
-    // "hyper-ayu",
-    // "hyper-flat-2",
-    // "hyper-ramda",
-    // "hyper-saxy",
-    // "hyper-darkmatter",
-    // "hyperterm-palenight",
-    // "hyper-krftwrk",
-    // "hyper-criollo",
-    // "hyper-cyberpunk",
-    // "hyper-electron-highlighter",
-    // "hyperocean",
-    // "hyper-subliminal-theme",
-    // "hyper-night-owl",
-    // "hyper-whimsy",
-    // "shades-of-purple-hyper",
-    // "hyper-flat",
-    // "hyper-chesterish",
-    // "hyper-tabs-enhanced",
-    // "hypercwd",
-    // "hyperterm-visor",
-    // "hyperterm-dibdabs",
-    // "hyperterm-focus-reporting",
-    // "hyper-statusline-extended",
-    // "hyper-history",
-    // "hyperdocs",
-    // "hyper-search",
-    // "hypergoogle",
-    // "hyper-visual",
-    // "hyper-blink",
-    // "hyperfullscreen",
-    // "hyperterm-crosshair",
-    // "hyperterm-base16"
-
     plugins: [
-      "hyperpower",
-      "hyperborder",
-      "hypercwd",
-      "hyperterm-summon",
-      "hyperterm-dibdabs",
-      "hyperterm-paste",
-      "hyperterm-tabs",
-      "hyper-search",
-      "hyper-quit",
-      "hyper-blink"
+	"hyperterm-cyberpunk",
+	"hyperminimal",
+	"hyper-tabs-enhanced",
+	"hyperborder"
     ],
 
     // in development, you can create a directory under
@@ -273,8 +179,7 @@ module.exports = {
     localPlugins: [],
 
     keymaps: {
-      // Example
-      // 'window:devtools': 'cmd+alt+o',
-    }
-  }
+	// Example
+	// 'window:devtools': 'cmd+alt+o',
+    },
 };

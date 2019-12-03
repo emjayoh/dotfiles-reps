@@ -1,104 +1,226 @@
-#
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
-# Source Prezto.
-
-source "$HOME/.zshrc.local"
 neofetch
-user_with_skull() {
-    echo -n "\ufb8a $(whoami)"
-}
+# eval $(thefuck --alias)
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export GREN_GITHUB_TOKEN=61e976a84649a2cd80ef959def85a1be3612a919
+export SENTRY_AUTH_TOKEN=cd2d11009c854c9eb546df59e818bf0952ff751625264436abb764a782c43f0e
+export SENTRY_ORG=reps-co
+export CODECOV_TOKEN=72d874ca-8b12-49c0-96f5-78135b7d0bb5
+
+export CLICOLOR=1
+
+export GOOGLE_API_KEY="813333361316-2adu6gcjl9ifhbvu15vtp0bnhjjml4c0.apps.googleusercontent.com"
+export GOOGLE_DEFAULT_CLIENT_ID="rCwiRWB5BgBNAu2roGa3J84T"
+export GOOGLE_DEFAULT_CLIENT_SECRET="AIzaSyDlsw4qCG8WOa_s4pIQ4hmxgrdw33jRch8"
+
+# Path to your oh-my-zsh installation.
+export ZSH="/Users/mattogram/.oh-my-zsh"
 export TERM="xterm-256color"
-export SLIMERJSLAUNCHER=/Applications/Firefox.app/Contents/MacOS/firefox
-# POWERLEVEL9K_MODE='awesome-fontconfig'
-POWERLEVEL9K_MODE='nerdfont-complete'
-# zsh_wifi_signal(){
-#     local signal=$(nmcli device wifi | grep yes | awk '{print $8}')
-#     local color='%F{yellow}'
-#     [[ $signal -gt 75 ]] && color='%F{green}'
-#     [[ $signal -lt 50 ]] && color='%F{red}'
-#     echo -n "%{$color%}\uf230  $signal%{%f%}" # \uf230 is 
-# }
-#
-# POWERLEVEL9K_CUSTOM_WIFI_SIGNAL="zsh_wifi_signal"
-# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context time battery dir vcs virtualenv custom_wifi_signal)
-#
+export DOTFILES="/Users/mattogram/config"
 
-# POWERLEVEL9K_CONTEXT_TEMPLATE='%n'
-# POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='white'
-# POWERLEVEL9K_BATTERY_CHARGING='yellow'
-# POWERLEVEL9K_BATTERY_CHARGED='green'
-# POWERLEVEL9K_BATTERY_DISCONNECTED='$DEFAULT_COLOR'
-# POWERLEVEL9K_BATTERY_LOW_THRESHOLD='10'
-# POWERLEVEL9K_BATTERY_LOW_COLOR='red'
-# POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=''
-# POWERLEVEL9K_BATTERY_ICON='\uf1e6 '
-# POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-# # POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{014}\u2570%F{cyan}\uF460%F{073}\uF460%F{109}\uF460%f "
-# # POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{014}\u2570%F{cyan}\uF460%F{073}\uF460%F{109}\uF460%f "
-#
-# POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='yellow'
-# POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='yellow'
-# POWERLEVEL9K_VCS_UNTRACKED_ICON='?'
-#
-# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context battery dir vcs)
-# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time dir_writable ip custom_wifi_signal ram load background_jobs)
-#
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
-#
-# POWERLEVEL9K_TIME_FORMAT="%D{\uf017 %H:%M \uf073 %d/%m/%y}"
-# POWERLEVEL9K_TIME_BACKGROUND='white'
-# POWERLEVEL9K_RAM_BACKGROUND='yellow'
-# POWERLEVEL9K_LOAD_CRITICAL_BACKGROUND="white"
-# POWERLEVEL9K_LOAD_WARNING_BACKGROUND="white"
-# POWERLEVEL9K_LOAD_NORMAL_BACKGROUND="white"
-# POWERLEVEL9K_LOAD_CRITICAL_FOREGROUND="red"
-# POWERLEVEL9K_LOAD_WARNING_FOREGROUND="yellow"
-# POWERLEVEL9K_LOAD_NORMAL_FOREGROUND="black"
-# POWERLEVEL9K_LOAD_CRITICAL_VISUAL_IDENTIFIER_COLOR="red"
-# POWERLEVEL9K_LOAD_WARNING_VISUAL_IDENTIFIER_COLOR="yellow"
-# POWERLEVEL9K_LOAD_NORMAL_VISUAL_IDENTIFIER_COLOR="green"
-#
-#
-# #POWERLEVEL9K_HOME_ICON=''
-# #POWERLEVEL9K_HOME_SUB_ICON=''
-# #POWERLEVEL9K_FOLDER_ICON=''
-# POWERLEVEL9K_STATUS_VERBOSE=true
-# POWERLEVEL9K_STATUS_CROSS=true
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+alias hyperconf="emacs /Users/mattogram/.hyper.js"
+alias zshconf="emacs /Users/mattogram/.zshrc"
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+
+
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="\n "
-POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX=">"
-#
-# # Separators
-# # POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=$'\ue0b0'
-# # POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR=$'\ue0b1'
-# # POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=$'\ue0b2'
-# # POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR=$'\ue0b7'
-#
-# POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=$'\ue0ce'
-# POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR=$'\ue0cc'
-# POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=$'\ue0c7'
-# POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR=$'\ue0ca'
-#
-# POWERLEVEL9K_CUSTOM_USER="user_with_skull"
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_beginning"
+POWERLEVEL9K_RVM_BACKGROUND="black"
+POWERLEVEL9K_RVM_FOREGROUND="249"
+POWERLEVEL9K_RVM_VISUAL_IDENTIFIER_COLOR="red"
+POWERLEVEL9K_TIME_BACKGROUND="black"
+POWERLEVEL9K_TIME_FOREGROUND="249"
+POWERLEVEL9K_TIME_FORMAT="\UF43A %D{%H:%M  \UF133  %d.%m.%y}"
+POWERLEVEL9K_RVM_BACKGROUND="black"
+POWERLEVEL9K_RVM_FOREGROUND="249"
+POWERLEVEL9K_RVM_VISUAL_IDENTIFIER_COLOR="red"
+POWERLEVEL9K_STATUS_VERBOSE=false
+POWERLEVEL9K_VCS_CLEAN_FOREGROUND='black'
+POWERLEVEL9K_VCS_CLEAN_BACKGROUND='green'
+POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='black'
+POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='yellow'
+POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='white'
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='black'
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND='black'
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='blue'
+POWERLEVEL9K_FOLDER_ICON=''
+POWERLEVEL9K_STATUS_OK_IN_NON_VERBOSE=true
+POWERLEVEL9K_STATUS_VERBOSE=false
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
+POWERLEVEL9K_VCS_UNTRACKED_ICON='\u25CF'
+POWERLEVEL9K_VCS_UNSTAGED_ICON='\u00b1'
+POWERLEVEL9K_VCS_INCOMING_CHANGES_ICON='\u2193'
+POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON='\u2191'
+POWERLEVEL9K_VCS_COMMIT_ICON="\uf417"
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{blue}\u256D\u2500%F{white}"
+POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="%F{blue}\u2570\uf460%F{white} "
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{blue}\u2570\uf460%F{white} "
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context os_icon ssh root_indicator dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time  status rvm time)
 
+# MY OLD CONFIG
 
+# POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+# POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+# POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="\n "
+# POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX=">"
+# POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+# POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
+#POWERLEVEL9K_MODE='nerdfont-complete'
+#ZSH_THEME="powerlevel9k/powerlevel9k"
 
-alias emacs="/usr/local/Cellar/emacs-plus/HEAD-bca3531/Emacs.app/Contents/MacOS/Emacs -nw"
-export EDITOR="emacs"
-#source $(dirname $(gem which colorls))/tab_complete.sh
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-# Enable tab completion of flags
-#source $(dirname $(gem which colorls))/tab_complete.sh
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git git-flow-completion zsh-autosuggestions alias-tips zsh-syntax-highlighting osx z yarn ansible aws command-not-found common-aliases copydir copyfile cp docker-compose docker-machine docker emacs emoji-clock emoji emotty extract git-extras git-prompt history iterm2 lol node npm python sudo thefuck vagrant-prompt tmux vagrant)
+autoload -U compinit && compinit
+source $ZSH/oh-my-zsh.sh
+
+bindkey '\e[A' history-beginning-search-backward
+bindkey '\e[B' history-beginning-search-forward
+# User configuration
+
+# Helpful
+alias s='cd ~/Sites'
+alias art='php artisan'
+alias path='echo -e ${PATH//:/\\n}'
+alias copy_ssh="pbcopy < $HOME/.ssh/id_rsa.pub"
+alias reload="exec ${SHELL} -l"
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+alias flush_dns="sudo killall -HUP mDNSResponder"
+alias chdirs="find . -type d -exec chmod 755 {} \;"
+alias chfiles="find . -type f -exec chmod 644 {} \;"# Common files for editing
+alias edit_hosts='subl /etc/hosts'
+alias edit_httpd='subl /usr/local/etc/httpd/httpd.conf'
+alias edit_vhosts='subl /usr/local/etc/httpd/extra/httpd-vhosts.conf'
+alias edit_php='subl /usr/local/etc/php/7.2/php.ini'# System
+alias update='mas upgrade; brew cleanup; brew upgrade; brew update; brew cask cleanup; brew cu -a -y; composer global update; npm update -g; npm install npm@latest -g'
+alias show_files='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
+alias hide_files='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
+alias show_desktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+alias hide_desktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias enable_gate="sudo spctl --master-enable"
+alias disable_gate="sudo spctl --master-disable"# IP
+alias ip='dig +short myip.opendns.com @resolver1.opendns.com'# NPM
+alias nom='rm -rf node_modules/ && npm cache verify && npm install'# Github
+alias wip="git add .;git commit -m 'wip'"
+alias nah='git reset --hard;git clean -df'# Composer
+alias dump='composer dump-autoload -o'# Chrome
+alias kill_chrome="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"# Dummy
+alias shrug="printf '¯\_(ツ)_/¯' | pbcopy"
+alias flipt="printf '(╯°□°)╯︵ ┻━┻' | pbcopy"
+alias fight="printf '(ง'̀-'́)ง' | pbcopy"
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+#alias emacs="/usr/local/Cellar/emacs-plus/HEAD-bca3531/Emacs.app/Contents/MacOS/Emacs -nw"
+export EDITOR='emacs'
+export VAGRANT_USE_VAGRANT_TRIGGERS=true
+alias refresh_modules="rm -rf node_modules && npm cache clean --force && npm i"
+alias reps="cd ~/Projects/reps/www/konami.reps"
+alias rs="npm run start:local"
+alias yrs="yarn run start:local"
+# Helpful
+alias s='cd ~/Sites'
+alias art='php artisan'
+alias path='echo -e ${PATH//:/\\n}'
+alias copy_ssh="pbcopy < $HOME/.ssh/id_rsa.pub"
+alias reload="exec ${SHELL} -l"
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+alias flush_dns="sudo killall -HUP mDNSResponder"
+alias chdirs="find . -type d -exec chmod 755 {} \;"
+alias chfiles="find . -type f -exec chmod 644 {} \;"# Common files for editing
+alias edit_hosts='emacs /etc/hosts'
+alias edit_httpd='emacs /usr/local/etc/httpd/httpd.conf'
+alias edit_vhosts='emacs /usr/local/etc/httpd/extra/httpd-vhosts.conf'
+alias edit_php='emacs /usr/local/etc/php/7.2/php.ini'# System
+alias update='mas upgrade; brew cleanup; brew upgrade; brew update; brew cask cleanup; brew cu -a -y; composer global update; npm update -g; npm install npm@latest -g'
+alias show_files='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
+alias hide_files='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
+alias show_desktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+alias hide_desktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias enable_gate="sudo spctl --master-enable"
+alias disable_gate="sudo spctl --master-disable"# IP
+alias ip='dig +short myip.opendns.com @resolver1.opendns.com'# NPM
+alias nom='rm -rf node_modules/ && npm cache verify && npm install'# Github
+alias wip="git add .;git commit -m 'wip'"
+alias nah='git reset --hard;git clean -df'# Composer
+alias dump='composer dump-autoload -o'# Chrome
+alias kill_chrome="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"# Dummy
+alias shrug="printf '¯\_(ツ)_/¯' | pbcopy"
+alias flipt="printf '(╯°□°)╯︵ ┻━┻' | pbcopy"
+alias fight="printf '(ง'̀-'́)ง' | pbcopy"
+
+source $(dirname $(gem which colorls))/tab_complete.sh
 
 # Move standard ls
 alias ols="ls"
@@ -122,55 +244,39 @@ alias lsg="ls --git-status"
 alias llg="ll --git-status"
 alias ldg="ld --git-status"
 alias lag="la --git-status"
-# Customize to your needs...
-#BASHISHDIR="/usr/local/Cellar/bashish/2.2.4/share/bashish"                 ## line added by bashish
-#TTY=`tty 2>/dev/null` && if test "x$BASHISHDIR" != x;then       ## line added by bashish
-#test "$BASHISH_OLDPATH"||BASHISH_OLDPATH="$PATH"                ## line added by bashish
-#PATH="$HOME/.bashish/launcher:$BASHISHDIR/lib:$BASHISH_OLDPATH" ## line added by bashish
-#BASHSISH_CP=437                                                 ## line added by bashish
-#TEST_TERM="$TERM" _bashish_utfcheck && BASHISH_CP=utf8          ## line added by bashish
-#ENV="$HOME/.profile"                                            ## line added by bashish
-#export BASHISH_CP BASHISH_OLDPATH TTY ENV                       ## line added by bashish
-#. "$BASHISHDIR/main/prompt/sh/init"                             ## line added by bashish
-#fi                                                              ## line added by bashish
 
-alias refresh_modules="rm -rf node_modules && npm cache clean --force && npm i"
-alias reps="cd ~/Projects/reps/www/konami.reps"
-alias rs="npm run start:local"
+# Compilation flags
+export ARCHFLAGS="-arch x86_64"
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias emacs="emacs -nw"
+alias bubble='cd ~/Scripts/Bubble && ./connect.sh'
+/usr/local/bin/git-tip
 
-#zstyle ':prezto:load' pmodule-dirs $HOME/.zprezto-contrib
-export PATH="/usr/local/opt/ruby/bin:$PATH"
+#eval $(thefuck --alias --enable-experimental-instant-mode)
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-export VAGRANT_USE_VAGRANT_TRIGGERS=true
-# Base16 Shell
-# BASE16_SHELL="$HOME/.config/base16-shell/"
-# [ -n "$PS1" ] && \
-#     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-#     eval "$("$BASE16_SHELL/profile_helper.sh")"
+#jp2a ~/Pictures/tool.jpg --colors --border --fill --height=200
+#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-    POWERLEVEL9K_CUSTOM_WIFI_SIGNAL="zsh_wifi_signal"
-    POWERLEVEL9K_CUSTOM_WIFI_SIGNAL_BACKGROUND="white"
-    POWERLEVEL9K_CUSTOM_WIFI_SIGNAL_FOREGROUND="black"
 
-    zsh_wifi_signal(){
-            local output=$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I)
-            local airport=$(echo $output | grep 'AirPort' | awk -F': ' '{print $2}')
+PATH="/Users/mattogram/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/Users/mattogram/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/Users/mattogram/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/Users/mattogram/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/mattogram/perl5"; export PERL_MM_OPT;
 
-            if [ "$airport" = "Off" ]; then
-                    local color='%F{black}'
-                    echo -n "%{$color%}Wifi Off"
-            else
-                    local ssid=$(echo $output | grep ' SSID' | awk -F': ' '{print $2}')
-                    local speed=$(echo $output | grep 'lastTxRate' | awk -F': ' '{print $2}')
-                    local color='%F{black}'
+#toilet --gay "welcome back lil' rice" -t
 
-                    [[ $speed -gt 100 ]] && color='%F{black}'
-                    [[ $speed -lt 50 ]] && color='%F{red}'
+#imgcat ~/Pictures/tool.jpg
 
-                    echo -n "%{$color%}$speed Mbps \uf1eb%{%f%}" # removed char not in my PowerLine font
-            fi
-    }
+# jp2a ~/Pictures/download.jpg 
+# Set Spaceship ZSH as a prompt
+autoload -U promptinit; promptinit
+prompt spaceship
