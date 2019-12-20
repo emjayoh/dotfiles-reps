@@ -3,183 +3,260 @@
 // See https://hyper.is#cfg for all currently supported options.
 
 module.exports = {
-    config: {
-	// choose either `'stable'` for receiving highly polished,
-	// or `'canary'` for less polished but more frequent updates
-	updateChannel: 'stable',
+  config: {
+    // choose either `'stable'` for receiving highly polished,
+    // or `'canary'` for less polished but more frequent updates
+    updateChannel: 'stable',
 
-	// default font size in pixels for all tabs
-	fontSize: 12,
+    // default font size in pixels for all tabs
+    fontSize: 12,
 
-	// font family with optional fallbacks
-	fontFamily: '"OpenDyslexicMono Nerd Font Mono", "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    // font family with optional fallbacks
+    fontFamily: '"OpenDyslexicMono Nerd Font Mono", "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
-	// default font weight: 'normal' or 'bold'
-	fontWeight: 'normal',
+    // default font weight: 'normal' or 'bold'
+    fontWeight: 'normal',
 
-	// font weight for bold characters: 'normal' or 'bold'
-	fontWeightBold: 'bold',
+    // font weight for bold characters: 'normal' or 'bold'
+    fontWeightBold: 'bold',
 
-	// line height as a relative unit
-	lineHeight: 1,
+    // line height as a relative unit
+    lineHeight: 1,
 
-	// letter spacing as a relative unit
-	letterSpacing: 0,
+    // letter spacing as a relative unit
+    letterSpacing: 0,
 
-	// terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-	cursorColor: 'rgba(248,28,229,0.8)',
+    // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
+    cursorColor: 'rgba(248,28,229,0.8)',
 
-	// terminal text color under BLOCK cursor
-	cursorAccentColor: '#000',
+    // terminal text color under BLOCK cursor
+    cursorAccentColor: '#000',
 
-	// `'BEAM'` for |, `'UNDERLINE'` for _, `'BLOCK'` for █
-	cursorShape: 'BLOCK',
+    // `'BEAM'` for |, `'UNDERLINE'` for _, `'BLOCK'` for █
+    cursorShape: 'BLOCK',
 
-	// set to `true` (without backticks and without quotes) for blinking cursor
-	cursorBlink: false,
+    // set to `true` (without backticks and without quotes) for blinking cursor
+    cursorBlink: false,
 
-	// color of the text
-	foregroundColor: '#fff',
+    // color of the text
+    foregroundColor: '#fff',
 
-	// terminal background color
-	// opacity is only supported on macOS
-	backgroundColor: '#000',
+    // terminal background color
+    // opacity is only supported on macOS
+    backgroundColor: 'rgba(52,40,95,0.5)',
 
-	// terminal selection color
-	selectionColor: 'rgba(248,28,229,0.3)',
+    // terminal selection color
+    selectionColor: 'rgba(248,28,229,0.3)',
 
-	// border color (window, tabs)
-	borderColor: '#333',
+    // border color (window, tabs)
+    borderColor: '#333',
 
-	// custom CSS to embed in the main window
-	css: '',
+    // custom CSS to embed in the main window
+    css: `
+    /* GOOD CSS */
+    .hyper-wallpaper-wrapper {
+      // filter: blur(2px);
+      // opacity: 0.3;
+      // backdrop-filter: blur(0.8);
+      filter: blur(1px);
+      filter: brightness(50%);
+      filter: opacity(0.3);
+    }
+    /* END GOOD CSS */
+    .hyper_main {}
+      /*
+      .terms_terms { 
+         background: url(file:///Users/mattogram/.hyper-bg/floyd.jpg) center;
+         background-size: cover;
+      }
+      */
+      .terms_termsNotShifted {
+        // background-color: rgba(16,13,24,0.6);
+        background-color: purple;
+      }
+      /*
+      .terms_terms {
+        background: url(file:///Users/mattogram/.hyper-bg/floyd.jpg) center;
+        background-size: cover;
+        //filter: grayscale(100%) blur(1px);
+      }
+      .terms_termGroup {
+        //filter: grayscale(100%) blur(1px);
+        //background: rgba(0,0,0,0.7) !important;
+        background-color: rgba(16,13,34,0.7) !important; 
+      }
+      .terms_terms:before {
+        content: "";
+        position: absolute;
+        width : 100%;
+        height: 100%;
+        background: inherit;
+        z-index: -1;
 
-	// custom CSS to embed in the terminal window
-	termCSS: '',
+        filter        : blur(10px);
+        -moz-filter   : blur(10px);
+        -webkit-filter: blur(10px);
+        -o-filter     : blur(10px);
 
-	// set custom startup directory (must be an absolute path)
-	workingDirectory: '',
+        transition        : all 2s linear;
+        -moz-transition   : all 2s linear;
+        -webkit-transition: all 2s linear;
+        -o-transition     : all 2s linear;
+      }*/`,
 
-	// if you're using a Linux setup which show native menus, set to false
-	// default: `true` on Linux, `true` on Windows, ignored on macOS
-	showHamburgerMenu: '',
 
-	// set to `false` (without backticks and without quotes) if you want to hide the minimize, maximize and close buttons
-	// additionally, set to `'left'` if you want them on the left, like in Ubuntu
-	// default: `true` (without backticks and without quotes) on Windows and Linux, ignored on macOS
-	showWindowControls: '',
+    // custom CSS to embed in the terminal window
+    termCSS: '',
 
-	// custom padding (CSS format, i.e.: `top right bottom left`)
-	padding: '12px 14px',
+    // set custom startup directory (must be an absolute path)
+    workingDirectory: '',
 
-	// the full list. if you're going to provide the full color palette,
-	// including the 6 x 6 color cubes and the grayscale map, just provide
-	// an array here instead of a color map object
-	colors: {
-	    black: '#000000',
-	    red: '#C51E14',
-	    green: '#1DC121',
-	    yellow: '#C7C329',
-	    blue: '#0A2FC4',
-	    magenta: '#C839C5',
-	    cyan: '#20C5C6',
-	    white: '#C7C7C7',
-	    lightBlack: '#686868',
-	    lightRed: '#FD6F6B',
-	    lightGreen: '#67F86F',
-	    lightYellow: '#FFFA72',
-	    lightBlue: '#6A76FB',
-	    lightMagenta: '#FD7CFC',
-	    lightCyan: '#68FDFE',
-	    lightWhite: '#FFFFFF',
-	    limeGreen: '#32CD32',
-	    lightCoral: '#F08080',
-	},
+    // if you're using a Linux setup which show native menus, set to false
+    // default: `true` on Linux, `true` on Windows, ignored on macOS
+    showHamburgerMenu: '',
 
-	// the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
-	// if left empty, your system's login shell will be used by default
-	//
-	// Windows
-	// - Make sure to use a full path if the binary name doesn't work
-	// - Remove `--login` in shellArgs
-	//
-	// Windows Subsystem for Linux (WSL) - previously Bash on Windows
-	// - Example: `C:\\Windows\\System32\\wsl.exe`
-	//
-	// Git-bash on Windows
-	// - Example: `C:\\Program Files\\Git\\bin\\bash.exe`
-	//
-	// PowerShell on Windows
-	// - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
-	//
-	// Cygwin
-	// - Example: `C:\\cygwin64\\bin\\bash.exe`
-	//
-	// Git Bash
-	// - Example: `C:\\Program Files\\Git\\git-cmd.exe`
-	// Then Add `--command=usr/bin/bash.exe` to shellArgs
-	shell: '/bin/zsh',
+    // set to `false` (without backticks and without quotes) if you want to hide the minimize, maximize and close buttons
+    // additionally, set to `'left'` if you want them on the left, like in Ubuntu
+    // default: `true` (without backticks and without quotes) on Windows and Linux, ignored on macOS
+    showWindowControls: '',
 
-	// for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
-	// by default `['--login']` will be used
-	shellArgs: ['--login'],
+    // custom padding (CSS format, i.e.: `top right bottom left`)
+    padding: '12px 14px',
 
-	// for environment variables
-	env: {},
-
-	// Supported Options:
-	//  1. 'SOUND' -> Enables the bell as a sound
-	//  2. false: turns off the bell
-	bell: 'SOUND',
-
-	// An absolute file path to a sound file on the machine.
-	// bellSoundURL: '/path/to/sound/file',
-
-	// if `true` (without backticks and without quotes), selected text will automatically be copied to the clipboard
-	copyOnSelect: false,
-
-	// if `true` (without backticks and without quotes), hyper will be set as the default protocol client for SSH
-	defaultSSHApp: true,
-
-	// if `true` (without backticks and without quotes), on right click selected text will be copied or pasted if no
-	// selection is present (`true` by default on Windows and disables the context menu feature)
-	quickEdit: false,
-
-	// choose either `'vertical'`, if you want the column mode when Option key is hold during selection (Default)
-	// or `'force'`, if you want to force selection regardless of whether the terminal is in mouse events mode
-	// (inside tmux or vim with mouse mode enabled for example).
-	macOptionSelectionMode: 'vertical',
-
-	// Whether to use the WebGL renderer. Set it to false to use canvas-based
-	// rendering (slower, but supports transparent backgrounds)
-	webGLRenderer: false,
-
-	// if `true` (without backticks and without quotes), Hyper will ignore ligatures provided by some fonts
-	disableLigatures: false,
-
-	// for advanced config flags please refer to https://hyper.is/#cfg
+    // the full list. if you're going to provide the full color palette,
+    // including the 6 x 6 color cubes and the grayscale map, just provide
+    // an array here instead of a color map object
+    colors: {
+      black: '#000000',
+      red: '#C51E14',
+      green: '#1DC121',
+      yellow: '#C7C329',
+      blue: '#0A2FC4',
+      magenta: '#C839C5',
+      cyan: '#20C5C6',
+      white: '#C7C7C7',
+      lightBlack: '#686868',
+      lightRed: '#FD6F6B',
+      lightGreen: '#67F86F',
+      lightYellow: '#FFFA72',
+      lightBlue: '#6A76FB',
+      lightMagenta: '#FD7CFC',
+      lightCyan: '#68FDFE',
+      lightWhite: '#FFFFFF',
+      limeGreen: '#32CD32',
+      lightCoral: '#F08080',
     },
 
-    // a list of plugins to fetch and install from npm
-    // format: [@org/]project[#version]
-    // examples:
-    //   `hyperpower`
-    //   `@company/project`
-    //   `project#1.0.1`
-    plugins: [
-	"hyperterm-cyberpunk",
-	"hyperminimal",
-	"hyper-tabs-enhanced",
-	"hyperborder"
+    // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
+    // if left empty, your system's login shell will be used by default
+    //
+    // Windows
+    // - Make sure to use a full path if the binary name doesn't work
+    // - Remove `--login` in shellArgs
+    //
+    // Windows Subsystem for Linux (WSL) - previously Bash on Windows
+    // - Example: `C:\\Windows\\System32\\wsl.exe`
+    //
+    // Git-bash on Windows
+    // - Example: `C:\\Program Files\\Git\\bin\\bash.exe`
+    //
+    // PowerShell on Windows
+    // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
+    //
+    // Cygwin
+    // - Example: `C:\\cygwin64\\bin\\bash.exe`
+    //
+    // Git Bash
+    // - Example: `C:\\Program Files\\Git\\git-cmd.exe`
+    // Then Add `--command=usr/bin/bash.exe` to shellArgs
+    shell: '/bin/zsh',
+
+    // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
+    // by default `['--login']` will be used
+    shellArgs: ['--login'],
+
+    // for environment variables
+    env: {},
+
+    // Supported Options:
+    //  1. 'SOUND' -> Enables the bell as a sound
+    //  2. false: turns off the bell
+    bell: 'SOUND',
+
+    // An absolute file path to a sound file on the machine.
+    // bellSoundURL: '/path/to/sound/file',
+
+    // if `true` (without backticks and without quotes), selected text will automatically be copied to the clipboard
+    copyOnSelect: false,
+
+    // if `true` (without backticks and without quotes), hyper will be set as the default protocol client for SSH
+    defaultSSHApp: true,
+
+    // if `true` (without backticks and without quotes), on right click selected text will be copied or pasted if no
+    // selection is present (`true` by default on Windows and disables the context menu feature)
+    quickEdit: false,
+
+    // choose either `'vertical'`, if you want the column mode when Option key is hold during selection (Default)
+    // or `'force'`, if you want to force selection regardless of whether the terminal is in mouse events mode
+    // (inside tmux or vim with mouse mode enabled for exampl e).
+    macOptionSelectionMode: 'vertical',
+
+    // Whether to use the WebGL renderer. Set it to false to use canvas-based
+    // rendering (slower, but supports transparent backgrounds)
+    webGLRenderer: false,
+
+    // if `true` (without backticks and without quotes), Hyper will ignore ligatures provided by some fonts
+    disableLigatures: false,
+
+    // for advanced config flags please refer to https://hyper.is/#cfg
+    wallpapers: [
+      {
+        image: true,
+        filePath:
+          "/Users/mattogram/.hyper-bg/tool-wallpaper/tool-wallpaper/1297046-beautiful-tool-band-wallpaper-1920x1080-samsung.jpg",
+        size: "cover",
+        //color: rgba(16,13,34,0.7) !important;
+      },
+      {
+        image: true,
+        filePath:
+          "/Users/mattogram/.hyper-bg/tool-wallpaper/tool-wallpaper/1297026-amazing-tool-band-wallpaper-1920x1080-large-resolution.jpg",
+        size: "cover"
+      }
+      // {
+      //   image: false,
+      //   color: '#000000'
+      // }
     ],
 
-    // in development, you can create a directory under
-    // `~/.hyper_plugins/local/` and include it here
-    // to load it and avoid it being `npm install`ed
-    localPlugins: [],
-
-    keymaps: {
-	// Example
-	// 'window:devtools': 'cmd+alt+o',
+    hyperVibrance: {
+      vibrancy: 'dark',
     },
+  },
+  plugins: [
+    "hyperterm-cyberpunk",
+    "hyperminimal",
+    "hyper-tabs-enhanced",
+    "hyperborder",
+    "hyper-wallpaper",
+    "hypercwd",
+    "hyper-statusline-extended",
+    "hyper-pane",
+    "hyper-search",
+    "hyper-quit",
+    "hyper-opacity",
+    // "hyper-transparent-dynamic",
+    "hyper-vibrance",
+    // "hyper-cat-cursor"
+  ],
+
+  // in development, you can create a directory under
+  // `~/.hyper_plugins/local/` and include it here
+  // to load it and avoid it being `npm install`ed
+  localPlugins: [],
+
+  keymaps: {
+    // Example
+    // 'window:devtools': 'cmd+alt+o',
+  },
 };

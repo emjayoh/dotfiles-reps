@@ -1,26 +1,44 @@
 neofetch
-# eval $(thefuck --alias)
+
+export PATH=~/.npm-global/bin:$PATH
+
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export ANDROID_HOME=/path/to/android-sdk
+# Tokens for dev stuff
 export GREN_GITHUB_TOKEN=61e976a84649a2cd80ef959def85a1be3612a919
 export SENTRY_AUTH_TOKEN=cd2d11009c854c9eb546df59e818bf0952ff751625264436abb764a782c43f0e
 export SENTRY_ORG=reps-co
 export CODECOV_TOKEN=72d874ca-8b12-49c0-96f5-78135b7d0bb5
 
+# CLI config
 export CLICOLOR=1
 
-export GOOGLE_API_KEY="813333361316-2adu6gcjl9ifhbvu15vtp0bnhjjml4c0.apps.googleusercontent.com"
-export GOOGLE_DEFAULT_CLIENT_ID="rCwiRWB5BgBNAu2roGa3J84T"
-export GOOGLE_DEFAULT_CLIENT_SECRET="AIzaSyDlsw4qCG8WOa_s4pIQ4hmxgrdw33jRch8"
+# API keys etc
+#export GOOGLE_API_KEY="813333361316-2adu6gcjl9ifhbvu15vtp0bnhjjml4c0.apps.googleusercontent.com"
+#export GOOGLE_DEFAULT_CLIENT_ID="rCwiRWB5BgBNAu2roGa3J84T"
+#export GOOGLE_DEFAULT_CLIENT_SECRET="AIzaSyDlsw4qCG8WOa_s4pIQ4hmxgrdw33jRch8"
+export GOOGLE_API_KEY=AIzaSyAjsNzdUTPBtd8672PoSrVxpHHjMZf1hmg
+export GOOGLE_DEFAULT_CLIENT_ID=813333361316-v7hsic7829rjbcg3mtm0kg1kt3u52m6m.apps.googleusercontent.com
+export GOOGLE_DEFAULT_CLIENT_SECRET=e_En6KcgyTwl9zTl2tAB4OmQ
 
-# Path to your oh-my-zsh installation.
+# Helpful exports
 export ZSH="/Users/mattogram/.oh-my-zsh"
 export TERM="xterm-256color"
 export DOTFILES="/Users/mattogram/config"
 
+
 alias hyperconf="emacs /Users/mattogram/.hyper.js"
 alias zshconf="emacs /Users/mattogram/.zshrc"
+alias kittyconf="emacs /Users/mattogram/.config/kitty/kitty.conf"
+alias mpdconf="emacs /Users/mattogram/.mpd/mpd.conf"
 
+# Base16 Shell
+#BASE16_SHELL="$HOME/.config/base16-shell/"
+#[ -n "$PS1" ] && \
+#    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+#    eval "$("$BASE16_SHELL/profile_helper.sh")"
+    
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -106,7 +124,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time  status rvm time)
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+#ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -132,8 +150,9 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow-completion zsh-autosuggestions alias-tips zsh-syntax-highlighting osx z yarn ansible aws command-not-found common-aliases copydir copyfile cp docker-compose docker-machine docker emacs emoji-clock emoji emotty extract git-extras git-prompt history iterm2 lol node npm python sudo thefuck vagrant-prompt tmux vagrant)
-autoload -U compinit && compinit
+plugins=(git git-flow-completion zsh-autosuggestions alias-tips zsh-syntax-highlighting osx z yarn ansible aws command-not-found common-aliases copydir copyfile cp docker-compose docker-machine docker emacs)
+#emoji-clock emoji emotty extract git-extras git-prompt history iterm2 lol node npm python sudo thefuck vagrant-prompt tmux vagrant catimg git-auto-fetch git-extras git-flow-avh git github gitignore go iterm2 jira macports man node npm npx pip perms vscode yarn per-directory-history)
+#autoload -U compinit && compinit
 source $ZSH/oh-my-zsh.sh
 
 bindkey '\e[A' history-beginning-search-backward
@@ -258,13 +277,25 @@ export ARCHFLAGS="-arch x86_64"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias emacs="emacs -nw"
 alias bubble='cd ~/Scripts/Bubble && ./connect.sh'
-/usr/local/bin/git-tip
+alias zz="emacs ~/.zshrc"
 
+#/usr/local/bin/git-tip
+
+#eval $(thefuck --alias --enable-experimental-instant-mode)
 #eval $(thefuck --alias --enable-experimental-instant-mode)
 
 #jp2a ~/Pictures/tool.jpg --colors --border --fill --height=200
 #test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# NVM
+#export NVM_DIR="$HOME/.nvm"
+#NVM_HOMEBREW="/usr/local/opt/nvm/nvm.sh"
+#[ -s "$NVM_HOMEBREW" ] && \. "$NVM_HOMEBREW"
+#[ -x "$(command -v npm)" ] && export NODE_PATH=$NODE_PATH:`npm root -g`
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 PATH="/Users/mattogram/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/Users/mattogram/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
@@ -272,11 +303,33 @@ PERL_LOCAL_LIB_ROOT="/Users/mattogram/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_
 PERL_MB_OPT="--install_base \"/Users/mattogram/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/Users/mattogram/perl5"; export PERL_MM_OPT;
 
-#toilet --gay "welcome back lil' rice" -t
+toilet --gay "welcome back lil' rice" -t
 
 #imgcat ~/Pictures/tool.jpg
 
-# jp2a ~/Pictures/download.jpg 
+#jp2a ~/Pictures/download.jpg
+
 # Set Spaceship ZSH as a prompt
-autoload -U promptinit; promptinit
-prompt spaceship
+#autoload -U promptinit; promptinit
+#prompt spaceship
+
+# TODO - BROKEN
+#autoload -U compinit && compinit
+#autoload -U compinit promptinit
+#compinit
+#promptinit; prompt spaceship
+#autoload -Uz compinit promptinit
+##compinit
+##promptinit
+
+#autoload -Uz compinit promptinit
+#compinit
+#promptinit
+#prompt spaceship
+
+# Kitty-specific configx
+#kitty + complete setup zsh | source /dev/stdin
+#kitty +kitten icat /Users/mattogram/Pictures/tool-wallpaper/1297019-download-tool-band-wallpaper-1920x1080.jpg --align left --detect-support 
+autoload -U compinit && compinit
+
+eval "$(starship init zsh)"
