@@ -1,4 +1,3 @@
-##!/usr/bin/env bash
 ########################
 # EXPORTS
 ########################
@@ -12,7 +11,7 @@ export PATH=$HOME/bin:/usr/local/bin:~/.npm-global/bin:$PATH
 
 # Android SDK 
 #export ANDROID_HOME=/path/to/android-
- 
+
 # ZSH home
 export ZSH="~/.oh-my-zsh"
 
