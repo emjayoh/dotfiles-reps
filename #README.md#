@@ -1,0 +1,3 @@
+# Welcome to Matt Ogram's DotFiles: 2018 MacBook Pro; property of Reps & Co
+ 
+* This dotfiles repo uses [DotBot](https://github.com/anishathalye/dotbot) for installation and management
