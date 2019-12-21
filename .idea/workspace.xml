@@ -1,17 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ba24b3c3-3a5d-461d-9d4e-f2e83ecd775b" name="Default Changelist" comment="Just no.">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JQLSearcherProjectManager">
+    <selected>-1</selected>
+    <searchers />
+  </component>
+  <component name="JiraServerManager">
+    <selected>-1</selected>
+    <servers />
+  </component>
   <component name="ProjectId" id="1VGRhsd98NdkGcw6epUhgMOZWF1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ba24b3c3-3a5d-461d-9d4e-f2e83ecd775b" name="Default Changelist" comment="" />
+      <created>1576952020083</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576952020083</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Just no.">
+      <created>1576952206565</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576952206565</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="Just no." />
+    <option name="LAST_COMMIT_MESSAGE" value="Just no." />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="463" y="44" key="CommitChangelistDialog2" timestamp="1576952253848">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="463" y="44" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1576952253848" />
     <state x="100" y="100" width="1480" height="850" key="DiffContextDialog" timestamp="1576877656192">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="100" y="100" width="1480" height="850" key="DiffContextDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1576877656192" />
+    <state x="643" y="158" key="RollbackChangesDialog" timestamp="1576952295300">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="643" y="158" key="RollbackChangesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1576952295299" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1576952227177">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1576952227177" />
   </component>
 </project>
