@@ -1,3 +1,4 @@
+##!/usr/bin/env bash
 ########################
 # EXPORTS
 ########################
@@ -29,8 +30,8 @@ export ARCHFLAGS="-arch x86_64"
 
 # Node / NVM amd completion
 export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+[[ -s "/usr/local/opt/nvm/nvm.sh" ]] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ]] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # Perl paths
 PATH="~/perl5/bin${PATH:+:${PATH}}"; export PATH;
@@ -112,6 +113,7 @@ alias mpdconf="emacs /Users/mattogram/.mpd/mpd.conf"
 alias emacs="emacs -nw"
 alias bubble='cd ~/Scripts/Bubble && ./connect.sh'
 alias zz="emacs ~/.zshrc"
+alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 
 # Helpful
 alias s='cd ~/Sites'
@@ -169,6 +171,7 @@ alias llg="ll --git-status"
 alias ldg="ld --git-status"
 alias lag="la --git-status"
 
+#alias fixcask = `/usr/bin/find "$(brew --prefix)/Caskroom/"*'/.metadata' -type f -name '*.rb' -print0 | /usr/bin/xargs -0 /usr/bin/perl -i -pe 's/depends_on macos: \[.*?\]//gsm;s/depends_on macos: .*//g'`
 
 ################################
 # SHELL LOADER
@@ -184,7 +187,7 @@ neofetch
 plugins=(git git-flow-completion zsh-autosuggestions alias-tips zsh-syntax-highlighting osx z yarn ansible aws command-not-found common-aliases copydir copyfile cp docker-compose docker-machine docker emacs emoji-clock emoji emotty extract git-extras git-prompt history iterm2 lol node npm python sudo thefuck vagrant-prompt tmux vagrant catimg git-auto-fetch git-extras git-flow-avh git github gitignore go iterm2 jira macports man node npm npx pip perms vscode yarn per-directory-history)
 
 # Load OH MY ZSH
-source $ZSH/oh-my-zsh.sh
+source ${ZSH}/oh-my-zsh.sh
 
 # Quick terminal prompt nav
 bindkey '\e[A' history-beginning-search-backward
@@ -214,6 +217,7 @@ function brew_maint() {
   done
 }
 
+
 # Kitty-specific config
 #kitty + complete setup zsh | source /dev/stdin
 #kitty +kitten icat /Users/mattogram/Pictures/tool-wallpaper/1297019-download-tool-band-wallpaper-1920x1080.jpg --align left --detect-support
@@ -223,5 +227,5 @@ function brew_maint() {
 
 
 eval "$(starship init zsh)"
-autoload -U compinit
-compinit
+#autoload -U compinit
+#compinit
