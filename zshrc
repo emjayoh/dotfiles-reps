@@ -3,17 +3,19 @@
 ########################
 
 ## DO NOT STORE TOKENS IN VCS... import dummy
-source ~/.zshrc.local
+source /Users/mattogram/.zshrc.local
 
 ## PATHS
 # If you come from bash...
-export PATH=$HOME/bin:/usr/local/bin:~/.npm-global/bin:$PATH
+export PATH=~/.npm-global/bin:$PATH
 
-# Android SDK 
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Android SDK
 #export ANDROID_HOME=/path/to/android-
 
 # ZSH home
-export ZSH="~/.oh-my-zsh"
+export ZSH="/Users/mattogram/.oh-my-zsh"
 
 # Terminal type
 export TERM="xterm-256color"
@@ -32,10 +34,16 @@ export NVM_DIR="$HOME/.nvm"
 [[ -s "/usr/local/opt/nvm/nvm.sh" ]] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ]] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
+# ZSH HISTORY
+export HISTSIZE=1000000000
+export SAVEHIST=$HISTSIZE
+setopt EXTENDED_HISTORY
+
+
 # Perl paths
-PATH="~/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="~/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="~/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PATH="/Users/mattogram/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/Users/mattogram/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/Users/mattogram/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"~/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/~/perl5"; export PERL_MM_OPT;
 
@@ -183,7 +191,7 @@ neofetch
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow-completion zsh-autosuggestions alias-tips zsh-syntax-highlighting osx z yarn ansible aws command-not-found common-aliases copydir copyfile cp docker-compose docker-machine docker emacs emoji-clock emoji emotty extract git-extras git-prompt history iterm2 lol node npm python sudo thefuck vagrant-prompt tmux vagrant catimg git-auto-fetch git-extras git-flow-avh git github gitignore go iterm2 jira macports man node npm npx pip perms vscode yarn per-directory-history)
+#plugins=(git git-flow-completion zsh-autosuggestions alias-tips zsh-syntax-highlighting osx z yarn ansible aws command-not-found common-aliases copydir copyfile cp docker-compose docker-machine docker emacs emoji-clock emoji emotty extract git-extras git-prompt history iterm2 lol node npm python sudo thefuck vagrant-prompt tmux vagrant catimg git-auto-fetch git-extras git-flow-avh git github gitignore go iterm2 jira macports man node npm npx pip perms vscode yarn per-directory-history)
 
 # Load OH MY ZSH
 source ${ZSH}/oh-my-zsh.sh
@@ -193,28 +201,28 @@ bindkey '\e[A' history-beginning-search-backward
 bindkey '\e[B' history-beginning-search-forward
 
 # Auto command correction
-eval $(thefuck --alias --enable-experimental-instant-mode)
+#eval $(thefuck --alias --enable-experimental-instant-mode)
 
 # Daily git tip
-/usr/local/bin/git-tip
+#/usr/local/bin/git-tip
 
 # Couch tab completion
-source $(dirname $(gem which colorls))/tab_complete.sh
+#source $(dirname $(gem which colorls))/tab_complete.sh
 
 # Just fun things!
-toilet --gay "welcome back lil' rice" -t
+#toilet --gay "welcome back lil' rice" -t
 #imgcat ~/Pictures/tool.jpg
 #jp2a ~/Pictures/download.jpg
 
 ###################################
 # Functions
 ###################################
-function brew_maint() {
-  for c in update upgrade prune cleanup doctor; do
-    printf "$(tput setaf 6)==>$(tput sgr0) brew ${c}\n" # I know the color isn't quite right
-    brew ${c}
-  done
-}
+#function brew_maint() {
+#  for c in update upgrade prune cleanup doctor; do
+#    printf "$(tput setaf 6)==>$(tput sgr0) brew ${c}\n" # I know the color isn't quite right
+#    brew ${c}
+#  done
+#}
 
 
 # Kitty-specific config
