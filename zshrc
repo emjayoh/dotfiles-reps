@@ -8,7 +8,6 @@ source /Users/mattogram/.zshrc.local
 ## PATHS
 # If you come from bash...
 export PATH=~/.npm-global/bin:$PATH
-
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Android SDK
@@ -186,7 +185,7 @@ alias cat="lolcat -a -d 500"
 # SHELL LOADER
 ################################
 # MAC OS widget/stats
-neofetch
+neofetch | cat
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -233,7 +232,7 @@ bindkey '\e[B' history-beginning-search-forward
 
 # Just prompt things (spaceship/starship + zsh)
 
-
+source ~/.zsh_prompt
 
 eval "$(starship init zsh)"
 #autoload -U compinit

@@ -1,0 +1,584 @@
+tap "buo/cask-upgrade"
+tap "caskroom/cask"
+tap "chrokh/tap"
+tap "clangen/musikcube"
+tap "crisidev/chunkwm"
+tap "d12frosted/emacs-plus"
+tap "denisidoro/tools"
+tap "dunn/emacs"
+tap "getsentry/tools"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-drivers"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "kentaro-m/md2confl"
+tap "koekeishiya/formulae"
+tap "mopidy/mopidy"
+tap "mscharley/homebrew"
+tap "tzvetkoff/extras"
+cask "adoptopenjdk8"
+cask "osxfuse"
+cask "xquartz"
+# Portable ASCII art graphics library
+brew "aalib"
+# Software library to render fonts
+brew "freetype"
+# GNU internationalization (i18n) and localization (l10n) library
+brew "gettext"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@1.1"
+# Library for command-line editing
+brew "readline"
+# Command-line interface for SQLite
+brew "sqlite"
+# Interpreted, interactive, object-oriented programming language
+brew "python"
+# C/C++ and Java libraries for Unicode and globalization
+brew "icu4c"
+# Icons for the GNOME project
+brew "adwaita-icon-theme"
+# Automate deployment, configuration, and upgrading
+brew "ansible"
+# Graphical system information display for macOS
+brew "archey"
+# Aquarium animation in ASCII art
+brew "asciiquarium"
+# Automatic configure script builder
+brew "autoconf"
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
+# ASCII-art image browser and animation viewer
+brew "aview"
+# Official Amazon AWS command-line interface
+brew "awscli"
+# Provide progress bars for shell scripts
+brew "bar"
+# Programmable completion for Bash 3.2
+brew "bash-completion"
+# Collection of small bash scripts for heavy terminal users
+brew "bash-snippets"
+# Command-line automation tool
+brew "bitrise"
+# Terminal based search engine for bash commands
+brew "borg"
+# Like cat but displays content with syntax highlighting
+brew "ccat"
+# Classified Advertisements (used by HTCondor Central Manager)
+brew "classads"
+# Statistics utility to count lines of code
+brew "cloc"
+# Ncurses analog clock
+brew "clockywock"
+# Cross-platform make
+brew "cmake"
+# Console Matrix
+brew "cmatrix"
+# Library for sample rate conversion of audio data
+brew "libsamplerate"
+# High quality, one-dimensional sample-rate conversion library
+brew "libsoxr"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
+# Music player with an ncurses based interface
+brew "cmus"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Configurable talking characters in ASCII art
+brew "cowsay"
+# Free C++ class library of cryptographic schemes
+brew "cryptopp"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
+# Control the macOS dark mode from the command-line
+brew "dark-mode"
+# Message bus system, providing inter-application communication
+brew "dbus", restart_service: true
+# Lightweight workspace manager for the shell
+brew "desk"
+# Good-lookin' diffs with diff-highlight and more
+brew "diff-so-fancy"
+# Portable UPnP development kit
+brew "libupnp"
+# File system client for mounting network media servers
+brew "djmount"
+# Lightweight DNS forwarder and DHCP server
+brew "dnsmasq", restart_service: true
+# Pack, ship and run any application as a lightweight container
+brew "docker", link: false
+# Isolated development environments using Docker
+brew "docker-compose"
+# Create Docker hosts locally and on cloud providers
+brew "docker-machine", restart_service: true
+# Docker Machine driver for xhyve
+brew "docker-machine-driver-xhyve"
+# Tool for managing dock items
+brew "dockutil"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
+# Bandwidth-efficient encrypted backup
+brew "duplicity"
+# GNU Emacs text editor
+brew "emacs"
+# Text to speech, software speech synthesizer
+brew "espeak"
+# Modern replacement for 'ls'
+brew "exa"
+# Perl lib for reading and writing EXIF metadata
+brew "exiftool"
+# XML 1.0 parser
+brew "expat"
+# X11 image viewer
+brew "feh"
+# C routines to compute the Discrete Fourier Transform
+brew "fftw"
+# Banner-like program prints strings as ASCII art
+brew "figlet"
+# Collection of GNU find, xargs, and locate
+brew "findutils"
+# Real-time software synthesizer based on the SoundFont 2 specs
+brew "fluid-synth"
+# Generic library support script
+brew "libtool"
+# Command-line outline and bitmap font editor/converter
+brew "fontforge"
+# Infamous electronic fortune-cookie generator
+brew "fortune"
+# Interpreter for PostScript and PDF
+brew "ghostscript"
+# Highest-quality GIF encoder based on pngquant
+brew "gifski"
+# Perl compatible regular expressions library with a new API
+brew "pcre2"
+# Distributed revision control system
+brew "git"
+# GitHub-like contributions calendar but on the command-line
+brew "git-cal"
+# Enable transparent encryption/decryption of files in a git repo
+brew "git-crypt"
+# Small git utilities
+brew "git-extras"
+# AVH edition of git-flow
+brew "git-flow-avh"
+# Simple and efficient way to access statistics in git
+brew "git-quick-stats"
+# See your latest local git branches, formatted real fancy
+brew "git-recent"
+# Find where a commit was merged in git
+brew "git-when-merged"
+# Alternative to top/htop
+brew "glances"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# Manage compile and link flags for libraries
+brew "pkg-config"
+# n:m message multiplexer written in Go
+brew "gollum"
+# Version Control Visualization Tool
+brew "gource"
+# Command-line interface to libgphoto2
+brew "gphoto2"
+# Toolkit for creating graphical user interfaces
+brew "gtk+3"
+# GNOME Python bindings (based on GObject Introspection)
+brew "pygobject3"
+# Efficient network analysis for Python 3
+brew "graph-tool"
+# Image processing tools collection
+brew "graphicsmagick"
+# Development framework for multimedia applications
+brew "gstreamer"
+# GStreamer plugins (well-supported, basic set)
+brew "gst-plugins-base"
+# GStreamer plugins for Libav (a fork of FFmpeg)
+brew "gst-libav"
+# GStreamer plugins less supported, not fully tested
+brew "gst-plugins-bad"
+# GStreamer plugins (well-supported, under the LGPL)
+brew "gst-plugins-good"
+# Library for constructing graphs of media-handling components
+brew "gst-plugins-ugly"
+# Python overrides for gobject-introspection-based pygst bindings
+brew "gst-python"
+# GNOME XML library
+brew "libxml2"
+# GTK+ documentation tool
+brew "gtk-doc"
+# Integrates GTK macOS applications with the Mac desktop
+brew "gtk-mac-integration"
+# Convert source code to formatted text with syntax highlighting
+brew "highlight"
+# Bash and zsh history suggest box
+brew "hstr"
+# Text-based UI library
+brew "ncurses"
+# Improved top (interactive process viewer)
+brew "htop"
+# Add GitHub support to git on the command-line
+brew "hub"
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick", link: false
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick@6"
+# Native sequence editor for Git interactive rebase
+brew "interactive-rebase-tool"
+# String tool
+brew "intltool"
+# Interactive computing in Python
+brew "ipython"
+# Modular IRC client
+brew "irssi"
+# C library for encoding, decoding, and manipulating JSON
+brew "jansson"
+# Note taking and to-do application with synchronisation capabilities
+brew "joplin"
+# Convert JPG images to ASCII
+brew "jp2a"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Library for interacting with JSON
+brew "jsoncpp"
+# Command-line interface for Git, optimized for workflow simplicity
+brew "legit"
+# Input filter for the pager less
+brew "lesspipe"
+# Cross-platform Audio Library
+brew "libao"
+# Light HTTP/1.1 server library
+brew "libmicrohttpd"
+# Library for MPD in the C, C++, and Objective-C languages
+brew "libmpdclient"
+# C XSLT library for GNOME
+brew "libxslt"
+# Lynx-like WWW browser that supports tables, menus, etc.
+brew "links"
+# Rainbows and unicorns in your console!
+brew "lolcat"
+# Text-based web browser
+brew "lynx"
+# Keep your Mac's application settings in sync
+brew "mackup"
+# Utility for directing compilation
+brew "make"
+# Mac App Store command-line interface
+brew "mas"
+# Terminal-based visual file manager
+brew "midnight-commander"
+# Command-line music player client for mpd
+brew "mpc"
+# Music Player Daemon
+brew "mpd"
+# NCurses Disk Usage
+brew "ncdu"
+# Ncurses-based client for the Music Player Daemon
+brew "ncmpcpp"
+# Fast, highly customisable system info script
+brew "neofetch"
+# Port scanning utility for large networks
+brew "nmap"
+# Read-write NTFS driver for FUSE
+brew "ntfs-3g"
+# Manage multiple Node.js versions
+brew "nvm"
+# Generate clients, server & docs from an OpenAPI spec (v2, v3)
+brew "openapi-generator"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Password manager
+brew "pass"
+# Animated pipes terminal screensaver
+brew "pipes-sh"
+# Practical Music Search, an ncurses-based MPD client
+brew "pms"
+# Object-relational database system
+brew "postgresql"
+# Sound system for POSIX OSes
+brew "pulseaudio", restart_service: true
+# Password generator
+brew "pwgen"
+# Interpreted, interactive, object-oriented programming language
+brew "python@2"
+# GLib/GObject/GIO Python bindings for Python 2
+brew "pygobject"
+# Cross-platform application and UI framework
+brew "qt"
+# Software environment for statistical computing
+brew "r"
+# File browser
+brew "ranger"
+# Perl-powered file rename script with many helpful built-ins
+brew "rename"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Command-line Reddit client
+brew "rtv"
+# Powerful, clean, object-oriented scripting language
+brew "ruby"
+# Rxvt fork with Unicode support
+brew "rxvt-unicode"
+# Generate ASCII art with terminal, shell, and OS info
+brew "screenfetch"
+# Command-line interface for Spotify on a Mac
+brew "shpotify"
+# Prints a steam locomotive if you type sl instead of ls
+brew "sl"
+# Scriptable browser for Web developers
+brew "slimerjs"
+# SOund eXchange: universal sound sample translator
+brew "sox"
+# The cross-shell prompt for astronauts
+brew "starship"
+# Change macOS audio source from the command-line
+brew "switchaudio-osx"
+# Command-line interface for Telegram
+brew "telegram-cli"
+# User interface to the TELNET protocol (built from macOS Sierra sources)
+brew "telnet"
+# Code-search similar to ack
+brew "the_silver_searcher"
+# Programatically correct mistyped console commands
+brew "thefuck"
+# Text interface for Git repositories
+brew "tig"
+# Software synthesizer
+brew "timidity"
+# Simplified and community-driven man pages
+brew "tldr"
+# Terminal multiplexer
+brew "tmux"
+brew "toggle-osx-shadows"
+# Color-based alternative to figlet (uses libcaca)
+brew "toilet"
+# Upgrade all the things
+brew "topgrade"
+# Anonymizing overlay network for TCP
+brew "tor"
+# Lightweight BitTorrent client
+brew "transmission-cli"
+# Digital clock in ncurses
+brew "tty-clock"
+# Extract, view, and test RAR archives
+brew "unrar"
+# Google's JavaScript engine
+brew "v8"
+# Terminal emulator widget used by GNOME terminal
+brew "vte"
+# Terminal emulator widget used by GNOME terminal
+brew "vte3"
+# Pager/text based browser
+brew "w3m"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
+# Watch files and take action when they change
+brew "watchman"
+# Internet file retriever
+brew "wget"
+# Show the current WiFi network password
+brew "wifi-password"
+# Graphical network analyzer and capture tool
+brew "wireshark"
+# Lightweight macOS virtualization solution based on FreeBSD's bhyve
+brew "xhyve"
+# Convert XML to another format (based on XSL or other tools)
+brew "xmlto"
+# JavaScript package manager
+brew "yarn"
+# Tools that help create and edit Mallard or DocBook documentation
+brew "yelp-tools"
+# Download YouTube videos from the command-line
+brew "youtube-dl"
+# Tracks most-used directories to make cd smarter
+brew "z"
+# Network security monitor
+brew "zeek"
+# UNIX shell (command interpreter)
+brew "zsh"
+# Fish-like fast/unobtrusive autosuggestions for zsh
+brew "zsh-autosuggestions"
+# Additional completion definitions for zsh
+brew "zsh-completions"
+# Fish shell like syntax highlighting for zsh
+brew "zsh-syntax-highlighting"
+# Command-line tool to put Macs to sleep
+brew "zzz"
+# A command line tool to install base16 templates and set themes globally.
+brew "chrokh/tap/base16-manager"
+brew "clangen/musikcube/musikcube"
+# GNU Emacs text editor
+brew "d12frosted/emacs-plus/emacs-plus", args: ["HEAD"], link: false
+# Interactive cheatsheet tool for the command-line
+brew "denisidoro/tools/navi", args: ["HEAD"]
+# This is a Sentry command-line client for some generic tasks.
+brew "getsentry/tools/sentry-cli"
+# 🛠md2confl is a CLI tool to convert the markdown text to confluence wiki format.
+brew "kentaro-m/md2confl/md2confl"
+# Tiling window manager for macOS based on plugin architecture
+brew "koekeishiya/formulae/chunkwm", args: ["HEAD", "with-tmp-logging"]
+# Simple hotkey-daemon for macOS.
+brew "koekeishiya/formulae/skhd", args: ["HEAD", "with-logging"]
+# A cross-platform, GPU-accelerated terminal emulator
+brew "mscharley/homebrew/alacritty"
+brew "tzvetkoff/extras/im2a"
+cask "adium"
+cask "amethyst"
+cask "android-platform-tools"
+cask "android-sdk"
+cask "anybar"
+cask "appcleaner"
+cask "atom"
+cask "au-lab"
+cask "banshee"
+cask "bartender"
+cask "bitbar"
+cask "bitwarden"
+cask "blisk"
+cask "boostnote"
+cask "brave-browser"
+cask "caffeine"
+cask "cakebrew"
+cask "cantata"
+cask "cheatsheet"
+cask "chromium"
+cask "clementine"
+cask "colorpicker-antetype"
+cask "colorpicker-developer"
+cask "colorpicker-skalacolor"
+cask "commander-one"
+cask "dat"
+cask "datagrip"
+cask "deadbeef-devel"
+cask "discord"
+cask "displaperture"
+cask "dozer"
+cask "electric-sheep"
+cask "epic"
+cask "etcher"
+cask "figma"
+cask "firefox"
+cask "firefox-developer-edition"
+cask "flash-player"
+cask "font-anonymous-pro"
+cask "font-awesome-terminal-fonts"
+cask "font-cascadia"
+cask "font-d2coding"
+cask "font-fira-code"
+cask "font-hack-nerd-font"
+cask "font-icomoon"
+cask "font-inconsolata"
+cask "font-input"
+cask "font-iosevka"
+cask "font-iosevka-slab"
+cask "font-liberation-sans"
+cask "font-meslo-lg"
+cask "font-mononoki"
+cask "font-mplus-nerd-font"
+cask "font-nixie-one"
+cask "font-office-code-pro"
+cask "font-pt-mono"
+cask "font-source-code-pro"
+cask "font-source-code-pro-for-powerline"
+cask "font-source-sans-pro"
+cask "font-ubuntu"
+cask "font-victor-mono"
+cask "font-work-sans"
+cask "fontbase"
+cask "franz"
+cask "fuse"
+cask "genymotion"
+cask "gitkraken"
+cask "google-chrome-canary"
+cask "hammerspoon"
+cask "hyper"
+cask "hyperswitch"
+cask "iina"
+cask "insomnia"
+cask "istat-menus"
+cask "java"
+cask "joplin"
+cask "jqbx"
+cask "kaleidoscope"
+cask "karabiner"
+cask "keepassxc"
+cask "kid3"
+cask "kitty"
+cask "kodi"
+cask "lastpass"
+cask "lepton"
+cask "lighttable"
+cask "macdown"
+cask "meld"
+cask "menubar-colors"
+cask "mounty"
+cask "mpv"
+cask "ndm"
+cask "ngrok"
+cask "nordvpn"
+cask "obs"
+cask "onedrive"
+cask "opera"
+cask "opera-neon"
+cask "paper"
+cask "pennywise"
+cask "platypus"
+cask "postman"
+cask "pycharm"
+cask "qlcolorcode"
+cask "qlimagesize"
+cask "qlmarkdown"
+cask "qlprettypatch"
+cask "qlstephen"
+cask "qlvideo"
+cask "quicklook-csv"
+cask "quicklook-json"
+cask "quicklookase"
+cask "reactotron"
+cask "rocket"
+cask "serviio"
+cask "servpane"
+cask "sketch"
+cask "sonos"
+cask "soulseek"
+cask "spacelauncher"
+cask "spectacle"
+cask "spotify"
+cask "station"
+cask "suspicious-package"
+cask "telegram"
+cask "textmate"
+cask "the-unarchiver"
+cask "tidal"
+cask "tor-browser"
+cask "transmission"
+cask "turtl"
+cask "typora"
+cask "ubersicht"
+cask "vagrant"
+cask "vanilla"
+cask "vectr"
+cask "virtualbox"
+cask "virtualbox-extension-pack"
+cask "visual-studio-code"
+cask "vivaldi"
+cask "vivaldi-snapshot"
+cask "vlc-nightly"
+cask "webpquicklook"
+cask "webstorm"
+cask "whatsapp"
+cask "whatsapp-pocket"
+cask "windscribe"
+cask "xld"
+cask "yakyak"
+cask "yandex"
+cask "zoom"
+cask "zoomus"
+cask "zotero"
+mas "Amphetamine", id: 937984704
+mas "Flycut", id: 442160987
+mas "Fotor Photo Editor", id: 503039729
+mas "Microsoft Remote Desktop", id: 1295203466
+mas "OneHighlighter", id: 1131580917
+mas "Paper", id: 1143513744
+mas "Remote Desktop - VNC", id: 472995993
+mas "SnippetsLab", id: 1006087419
