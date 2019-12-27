@@ -139,8 +139,8 @@ alias show_files='defaults write com.apple.finder AppleShowAllFiles -bool true &
 alias hide_files='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
 alias show_desktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 alias hide_desktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
-alias enable_gate="sudo spctl --master-enable"
-alias disable_gate="sudo spctl --master-disable"# IP
+#alias enable_gate="sudo spctl --master-enable"
+#alias disable_gate="sudo spctl --master-disable"# IP
 alias ip='dig +short myip.opendns.com @resolver1.opendns.com'# NPM
 alias nom='rm -rf node_modules/ && npm cache verify && npm install'# Github
 alias wip="git add .;git commit -m 'wip'"
@@ -177,6 +177,8 @@ alias lsg="ls --git-status"
 alias llg="ll --git-status"
 alias ldg="ld --git-status"
 alias lag="la --git-status"
+
+alias cat="lolcat -a -d 500"
 
 #alias fixcask = `/usr/bin/find "$(brew --prefix)/Caskroom/"*'/.metadata' -type f -name '*.rb' -print0 | /usr/bin/xargs -0 /usr/bin/perl -i -pe 's/depends_on macos: \[.*?\]//gsm;s/depends_on macos: .*//g'`
 
@@ -236,3 +238,5 @@ bindkey '\e[B' history-beginning-search-forward
 eval "$(starship init zsh)"
 #autoload -U compinit
 #compinit
+
+eval $(thefuck --alias)

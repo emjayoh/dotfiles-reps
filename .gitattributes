@@ -1,1 +1,2 @@
-secretfile filter=git-crypt diff=git-crypt
+zsh_history filter=git-crypt diff=git-crypt
+.aws filter=git-crypt diff=git-cryot

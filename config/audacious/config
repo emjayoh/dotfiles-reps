@@ -1,0 +1,35 @@
+
+[audacious]
+show_numbers_in_pl=TRUE
+
+[gtkui]
+column_widths=10,275,175,10,175,175,10,100,36,10,275,275,275,10
+player_x=0
+player_y=0
+
+[gtkui-layout]
+item0_name=LyricWiki Plugin
+item0_pos=-1,0,0,284,188
+item1_name=Playlist Manager
+item1_pos=-1,0,0,284,188
+item2_name=Search Tool
+item2_pos=0,-1,-1,194,400
+item3_name=Blur Scope
+item3_pos=-1,0,0,284,188
+item4_name=Spectrum Analyzer
+item4_pos=-1,0,0,284,188
+item5_name=OpenGL Spectrum Analyzer
+item5_pos=-1,0,0,284,188
+item_count=6
+
+[skins]
+mainwin_font=Dank Mono 9
+playlist_font=Hack Nerd Font 8
+skin=/opt/local/share/audacious/Skins/Refugee
+
+[skins-layout]
+blur_scope=13,20,288,192
+cairo-spectrum=13,20,288,192
+gl-spectrum=13,20,288,192
+lyricwiki=160,51,288,192
+search-tool=13,20,288,192
