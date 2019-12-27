@@ -16,7 +16,8 @@
     #~/.ssh/config:
     ~/.zprofile:
     ~/.zshrc:
-    ~/.zshrc.local:
+    ~/.zsh_history:
+      force: true
     #~/.config/iterm2: config/iterm2
     #~/.config/base16-shell: config/base16-shell
     #~/.config/kitty: config/kitty
@@ -30,7 +31,7 @@
     #~/.config/neofetch: config/neofetch
     #~/.config/cmus: config/cmus
     #~/.config/configstore: config/configstore
-    ~/.config:
+    ~/.config/:
       glob: true
       path: config/*
     #~/.history:
