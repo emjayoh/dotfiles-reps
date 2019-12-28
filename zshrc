@@ -112,48 +112,49 @@ COMPLETION_WAITING_DOTS="true"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Common dotfile aliases
-alias hyperconf="/Users/mattogram/.hyper.js"
-alias zshconf="emacs /Users/mattogram/.zshrc"
-alias kittyconf="emacs /Users/mattogram/.config/kitty/kitty.conf"
-alias mpdconf="emacs /Users/mattogram/.mpd/mpd.conf"
-alias emacs="emacs -nw"
+alias hyperconf='/Users/mattogram/.hyper.js'
+alias zshconf='emacs /Users/mattogram/.zshrc'
+alias kittyconf='emacs /Users/mattogram/.config/kitty/kitty.conf'
+alias mpdconf='emacs /Users/mattogram/.mpd/mpd.conf'
+alias emacs='emacs -nw'
 alias bubble='cd ~/Scripts/Bubble && ./connect.sh'
-alias zz="emacs ~/.zshrc"
+alias zz='emacs ~/.zshrc'
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 
 # Helpful
-alias s='cd ~/Sites'
-alias path='echo -e ${PATH//:/\\n}'
-alias copy_ssh="pbcopy < $HOME/.ssh/id_rsa.pub"
-alias reload="exec ${SHELL} -l"
-alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
-alias flush_dns="sudo killall -HUP mDNSResponder"
-alias chdirs="find . -type d -exec chmod 755 {} \;"
-alias chfiles="find . -type f -exec chmod 644 {} \;"
-alias edit_hosts="${EDITOR} /etc/hosts"
-alias edit_httpd="${EDITOR} /usr/local/etc/httpd/httpd.conf"
-alias edit_vhosts="${EDITOR} /usr/local/etc/httpd/extra/httpd-vhosts.conf"
-alias update='mas upgrade; brew cleanup; brew upgrade; brew update; brew cask cleanup; brew cu -a -y; composer global update; npm update -g; npm install npm@latest -g'
-alias show_files='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
-alias hide_files='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
-alias show_desktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
-alias hide_desktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
-#alias enable_gate="sudo spctl --master-enable"
-#alias disable_gate="sudo spctl --master-disable"# IP
-alias ip='dig +short myip.opendns.com @resolver1.opendns.com'# NPM
-alias nom='rm -rf node_modules/ && npm cache verify && npm install'# Github
-alias wip="git add .;git commit -m 'wip'"
-alias nah='git reset --hard;git clean -df'# Composer
-alias dump='composer dump-autoload -o'# Chrome
-alias kill_chrome="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"# Dummy
-alias shrug="printf '¯\_(ツ)_/¯' | pbcopy"
-alias flipt="printf '(╯°□°)╯︵ ┻━┻' | pbcopy"
-alias fight="printf '(ง'̀-'́)ง' | pbcopy"
-alias refresh_modules="rm -rf node_modules && npm cache clean --force && npm i"
-alias reps="cd ~/Projects/reps/www/konami.reps"
-alias rs="npm run start:local"
-alias yrs="yarn run start:local"
-alias s='cd ~/Sites'
+#alias s='cd ~/Sites'
+#alias path='echo -e ${PATH//:/\\n}'
+#alias copy_ssh="pbcopy < $HOME/.ssh/id_rsa.pub"
+#alias reload="exec ${SHELL} -l"
+#alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+#alias flush_dns='sudo killall -HUP mDNSResponder'
+#alias chdirs='find . -type d -exec chmod 755 {} \;'
+#alias chfiles='find . -type f -exec chmod 644 {} \;"
+#alias edit_hosts="${EDITOR} /etc/hosts"
+#alias edit_httpd="${EDITOR} /usr/local/etc/httpd/httpd.conf"
+#alias edit_vhosts="${EDITOR} /usr/local/etc/httpd/extra/httpd-vhosts.conf"
+#alias update='mas upgrade; brew cleanup; brew upgrade; brew update; brew cask cleanup; brew cu -a -y; composer global update; npm update -g; npm install npm@latest -g'
+#alias show_files='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
+#alias hide_files='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
+#alias show_desktop='defaults write com.apple.finder CreateDesktop -bool true && killall Finder'
+#alias hide_desktop='defaults write com.apple.finder CreateDesktop -bool false && killall Finder'
+#alias enable_gate='sudo spctl --master-enable'
+#alias disable_gate='sudo spctl --master-disable' # IP
+#alias ip='dig +short myip.opendns.com @resolver1.opendns.com'# NPM
+#alias nom='rm -rf node_modules/ && npm cache verify && npm install'# Github
+#alias wip='git add .;git commit -m "wip"'
+#alias nah='git reset --hard;git clean -df'# Composer
+#alias dump='composer dump-autoload -o'# Chrome
+#alias kill_chrome="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"# Dummy
+#alias shrug="printf '¯\_(ツ)_/¯' | pbcopy"
+#alias flipt="printf '(╯°□°)╯︵ ┻━┻' | pbcopy"
+#alias fight="printf '(ง'̀-'́)ง' | pbcopy"
+#alias refresh_modules="rm -rf node_modules && npm cache clean --force && npm i"
+#alias reps="cd ~/Projects/reps/www/konami.reps"
+#alias rs="npm run start:local"
+#alias yrs="yarn run start:local"
+#alias s='cd ~/Sites'
+
 # Move standard ls
 alias ols="ls"
 # Base formats
@@ -177,7 +178,7 @@ alias llg="ll --git-status"
 alias ldg="ld --git-status"
 alias lag="la --git-status"
 
-alias cat="lolcat -a -d 500"
+#alias cat="lolcat -a -d 500"
 
 #alias fixcask = `/usr/bin/find "$(brew --prefix)/Caskroom/"*'/.metadata' -type f -name '*.rb' -print0 | /usr/bin/xargs -0 /usr/bin/perl -i -pe 's/depends_on macos: \[.*?\]//gsm;s/depends_on macos: .*//g'`
 
@@ -185,7 +186,9 @@ alias cat="lolcat -a -d 500"
 # SHELL LOADER
 ################################
 # MAC OS widget/stats
-neofetch | cat
+#neofetch | lolcat
+neofetch
+
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -232,10 +235,22 @@ bindkey '\e[B' history-beginning-search-forward
 
 # Just prompt things (spaceship/starship + zsh)
 
-source ~/.zsh_prompt
+#source ~/.zsh_prompt
 
 eval "$(starship init zsh)"
 #autoload -U compinit
 #compinit
 
-eval $(thefuck --alias)
+#eval $(thefuck --alias)
+
+
+if [[ -f ~/.zsh_prompt ]]; then
+  echo 'ZSH...'
+  . ~/.zsh_prompt
+fi
+# Blur {{{
+#if [[ $(ps --no-header -p $PPID -o comm) =~ '^yakuake|kitty$' ]]; then
+#  for wid in $(xdotool search --pid $PPID); do
+#    xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id $wid; done
+#fi
+# }}}
