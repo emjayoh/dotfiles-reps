@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba24b3c3-3a5d-461d-9d4e-f2e83ecd775b" name="Default Changelist" comment="Just no.">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zsh_history" beforeDir="false" afterPath="$PROJECT_DIR$/zsh_history" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zshrc" beforeDir="false" afterPath="$PROJECT_DIR$/zshrc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +30,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -82,6 +84,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="643" y="158" key="RollbackChangesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1576952295299" />
+    <state x="379" y="164" key="SettingsEditor" timestamp="1577728565781">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="379" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1577728565781" />
     <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1576952227177">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

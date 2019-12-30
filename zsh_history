@@ -10514,3 +10514,18 @@ sudo rm -rf /opt/local/lib/node_modules
 : 1577396412:0;lolcat ~/.zshrc
 : 1577396428:0;cat ~/.zshrc
 : 1577396431:0;exit
+: 1577491539:0;emacs install
+: 1577491550:0;emacs install.conf.yaml
+: 1577491782:0;which zsh
+: 1577491856:0;chsh -s "/usr/local/bin/zsh | lolcat" 
+: 1577491885:0;emacs /etc/shells
+: 1577491902:0;sudo emacs /etc/shells
+: 1577491920:0;chsh -s "/bin/zsh | lolcat" 
+: 1577491924:0;awdawda
+: 1577491936:0;sudo emacs /etc/shells
+: 1577491945:0;chsh -s "/bin/zsh | lolcat" 
+: 1577491987:0;chsh -s "/usr/local/bin/zsh | lolcat" 
+: 1577491997:0;/usr/local/bin/zsh --version
+: 1577492001:0;/bin/zsh --version
+: 1577492036:0;sudo emacs /etc/shells
+: 1577492070:0;exit
