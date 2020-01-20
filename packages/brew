@@ -2,22 +2,27 @@ tap "buo/cask-upgrade"
 tap "caskroom/cask"
 tap "chrokh/tap"
 tap "clangen/musikcube"
+tap "codeclimate/formulae"
 tap "crisidev/chunkwm"
 tap "d12frosted/emacs-plus"
 tap "denisidoro/tools"
 tap "dunn/emacs"
 tap "getsentry/tools"
+tap "homebrew/aliases"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
+tap "homebrew/command-not-found"
 tap "homebrew/core"
+tap "homebrew/livecheck"
 tap "homebrew/services"
 tap "kentaro-m/md2confl"
 tap "koekeishiya/formulae"
 tap "mopidy/mopidy"
 tap "mscharley/homebrew"
+tap "rigellute/tap"
 tap "tzvetkoff/extras"
 cask "adoptopenjdk8"
 cask "osxfuse"
@@ -35,7 +40,7 @@ brew "readline"
 # Command-line interface for SQLite
 brew "sqlite"
 # Interpreted, interactive, object-oriented programming language
-brew "python"
+brew "python", link: false
 # C/C++ and Java libraries for Unicode and globalization
 brew "icu4c"
 # Icons for the GNOME project
@@ -60,12 +65,20 @@ brew "bar"
 brew "bash-completion"
 # Collection of small bash scripts for heavy terminal users
 brew "bash-snippets"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# Remove large files or passwords from Git history like git-filter-branch
+brew "bfg"
 # Command-line automation tool
 brew "bitrise"
+# Secure and free password manager for all of your devices
+brew "bitwarden-cli"
 # Terminal based search engine for bash commands
 brew "borg"
 # Like cat but displays content with syntax highlighting
 brew "ccat"
+# Tiling window manager for macOS based on plugin architecture
+brew "chunkwm", args: ["HEAD", "with-tmp-logging"]
 # Classified Advertisements (used by HTCondor Central Manager)
 brew "classads"
 # Statistics utility to count lines of code
@@ -94,6 +107,8 @@ brew "cryptopp"
 brew "curl"
 # Control the macOS dark mode from the command-line
 brew "dark-mode"
+# POSIX-compliant descendant of NetBSD's ash (the Almquist SHell)
+brew "dash"
 # Message bus system, providing inter-application communication
 brew "dbus", restart_service: true
 # Lightweight workspace manager for the shell
@@ -122,6 +137,8 @@ brew "gnupg"
 brew "duplicity"
 # GNU Emacs text editor
 brew "emacs"
+# Cross-platform library for audio I/O
+brew "portaudio"
 # Text to speech, software speech synthesizer
 brew "espeak"
 # Modern replacement for 'ls'
@@ -166,6 +183,8 @@ brew "git-flow-avh"
 brew "git-quick-stats"
 # See your latest local git branches, formatted real fancy
 brew "git-recent"
+# Compute various size metrics for a Git repository
+brew "git-sizer"
 # Find where a commit was merged in git
 brew "git-when-merged"
 # Alternative to top/htop
@@ -188,14 +207,8 @@ brew "pygobject3"
 brew "graph-tool"
 # Image processing tools collection
 brew "graphicsmagick"
-# Development framework for multimedia applications
-brew "gstreamer"
-# GStreamer plugins (well-supported, basic set)
-brew "gst-plugins-base"
 # GStreamer plugins for Libav (a fork of FFmpeg)
 brew "gst-libav"
-# GStreamer plugins less supported, not fully tested
-brew "gst-plugins-bad"
 # GStreamer plugins (well-supported, under the LGPL)
 brew "gst-plugins-good"
 # Library for constructing graphs of media-handling components
@@ -250,6 +263,8 @@ brew "libao"
 brew "libmicrohttpd"
 # Library for MPD in the C, C++, and Objective-C languages
 brew "libmpdclient"
+# Powerful, clean, object-oriented scripting language
+brew "ruby"
 # C XSLT library for GNOME
 brew "libxslt"
 # Lynx-like WWW browser that supports tables, menus, etc.
@@ -276,8 +291,12 @@ brew "ncdu"
 brew "ncmpcpp"
 # Fast, highly customisable system info script
 brew "neofetch"
+# RSS/Atom feed reader for text terminals
+brew "newsboat"
 # Port scanning utility for large networks
 brew "nmap"
+# Tiny, lightning fast, feature-packed file manager
+brew "nnn"
 # Read-write NTFS driver for FUSE
 brew "ntfs-3g"
 # Manage multiple Node.js versions
@@ -304,6 +323,8 @@ brew "python@2"
 brew "pygobject"
 # Cross-platform application and UI framework
 brew "qt"
+# Python bindings for v5 of Qt
+brew "pyqt"
 # Software environment for statistical computing
 brew "r"
 # File browser
@@ -314,8 +335,6 @@ brew "rename"
 brew "ripgrep"
 # Command-line Reddit client
 brew "rtv"
-# Powerful, clean, object-oriented scripting language
-brew "ruby"
 # Rxvt fork with Unicode support
 brew "rxvt-unicode"
 # Generate ASCII art with terminal, shell, and OS info
@@ -348,6 +367,10 @@ brew "timidity"
 brew "tldr"
 # Terminal multiplexer
 brew "tmux"
+# Manage complex tmux sessions easily
+brew "tmuxinator"
+# Minimal, todo.txt-focused editor
+brew "todo-txt"
 brew "toggle-osx-shadows"
 # Color-based alternative to figlet (uses libcaca)
 brew "toilet"
@@ -383,12 +406,14 @@ brew "wireshark"
 brew "xhyve"
 # Convert XML to another format (based on XSL or other tools)
 brew "xmlto"
+# Yet Another Dotfiles Manager
+brew "yadm"
 # JavaScript package manager
 brew "yarn"
 # Tools that help create and edit Mallard or DocBook documentation
 brew "yelp-tools"
 # Download YouTube videos from the command-line
-brew "youtube-dl"
+brew "youtube-dl", link: false
 # Tracks most-used directories to make cd smarter
 brew "z"
 # Network security monitor
@@ -414,17 +439,21 @@ brew "denisidoro/tools/navi", args: ["HEAD"]
 brew "getsentry/tools/sentry-cli"
 # 🛠md2confl is a CLI tool to convert the markdown text to confluence wiki format.
 brew "kentaro-m/md2confl/md2confl"
-# Tiling window manager for macOS based on plugin architecture
-brew "koekeishiya/formulae/chunkwm", args: ["HEAD", "with-tmp-logging"]
 # Simple hotkey-daemon for macOS.
 brew "koekeishiya/formulae/skhd", args: ["HEAD", "with-logging"]
+# Mopidy extension for playing music from your music archive
+brew "mopidy/mopidy/mopidy-local"
+# Mopidy extension for controlling Mopidy from MPD clients
+brew "mopidy/mopidy/mopidy-mpd"
+# Mopidy extension for playing music from Spotify
+brew "mopidy/mopidy/mopidy-spotify"
 # A cross-platform, GPU-accelerated terminal emulator
 brew "mscharley/homebrew/alacritty"
+# A terminal user interface for Spotify
+brew "rigellute/tap/spotify-tui"
 brew "tzvetkoff/extras/im2a"
 cask "adium"
 cask "amethyst"
-cask "android-platform-tools"
-cask "android-sdk"
 cask "anybar"
 cask "appcleaner"
 cask "atom"
@@ -446,11 +475,8 @@ cask "colorpicker-antetype"
 cask "colorpicker-developer"
 cask "colorpicker-skalacolor"
 cask "commander-one"
+cask "dash"
 cask "dat"
-cask "datagrip"
-cask "deadbeef-devel"
-cask "discord"
-cask "displaperture"
 cask "dozer"
 cask "electric-sheep"
 cask "epic"
@@ -487,6 +513,7 @@ cask "fontbase"
 cask "franz"
 cask "fuse"
 cask "genymotion"
+cask "gisto"
 cask "gitkraken"
 cask "google-chrome-canary"
 cask "hammerspoon"
@@ -505,18 +532,23 @@ cask "kid3"
 cask "kitty"
 cask "kodi"
 cask "lastpass"
+cask "launchcontrol"
 cask "lepton"
 cask "lighttable"
 cask "macdown"
 cask "meld"
 cask "menubar-colors"
+cask "mkchromecast"
 cask "mounty"
 cask "mpv"
 cask "ndm"
 cask "ngrok"
 cask "nordvpn"
+cask "nox-app-player"
+cask "nzbget"
 cask "obs"
 cask "onedrive"
+cask "openshot-video-editor"
 cask "opera"
 cask "opera-neon"
 cask "paper"
@@ -540,9 +572,9 @@ cask "servpane"
 cask "sketch"
 cask "sonos"
 cask "soulseek"
+cask "soundflower"
 cask "spacelauncher"
 cask "spectacle"
-cask "spotify"
 cask "station"
 cask "suspicious-package"
 cask "telegram"
@@ -576,9 +608,9 @@ cask "zoomus"
 cask "zotero"
 mas "Amphetamine", id: 937984704
 mas "Flycut", id: 442160987
-mas "Fotor Photo Editor", id: 503039729
+mas "iMovie", id: 408981434
 mas "Microsoft Remote Desktop", id: 1295203466
 mas "OneHighlighter", id: 1131580917
 mas "Paper", id: 1143513744
+mas "Plash", id: 1494023538
 mas "Remote Desktop - VNC", id: 472995993
-mas "SnippetsLab", id: 1006087419

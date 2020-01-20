@@ -1,0 +1,42 @@
+# TODO
+1. Ansible + dotfiles
+2. Shell scripts for dynamic REPS config
+3. Spacemacs
+4. Tmux or screen + mouse hotkeys
+5. Fonts / Kitty / Webstorm
+6. Dash webstorm integration + hotkeys
+7. tmuxp
+
+# BACKUP LIST (not already done)
+1. .zsh_prompt
+2. .xconfig
+3. .spacemacs
+4. .skhdrc
+5. .shpotify.cfg
+6. .sentryclirc
+7. .oh-my-zsh
+8. .nvm
+9. .npm
+10. .npm-global
+11. .node_path
+12. .netrc
+13. .lolcommits
+14. .leptonrc
+15. .kodi
+16. .khdrc?
+17. .kdiff3rc
+18. .iterm2
+19. .git-templates
+20. .git-stats
+21. .fuse
+22. .brew-aliases
+23. .ansible
+24. .atom
+25. .tmuxp
+26. .osx
+
+
+
+# BACKUP SCRIPT ITEMS
+1. Webstorm CLI launcher
+2. osx config

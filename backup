@@ -2,6 +2,7 @@
 npm list -g --depth=0 > ~/.dotfiles/packages/npm || echo "npm failed"
 gem list > ~/.dotfiles/packages/gem || echo "gem failed"
 pip list > ~/.dotfiles/packages/pip || echo "pip failed"
-
+pip3 list > ~/.dotfiles/packages/pip3 || echo "pip3 failed"
+#sudo find / -iname *.app > ~/.dotfiles/packages/app-list || echo "app list failed"
 # `brew bundle dump` [`--force`] [`--describe`] [`--no-restart`] [`--file=`<path>|`--global`]
 brew bundle dump --force --describe --file=~/.dotfiles/packages/brew || echo "brew failed"

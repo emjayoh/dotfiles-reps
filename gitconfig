@@ -36,3 +36,5 @@
 	#editor = interactive-rebase-tool
 	#editor = /Applications/WebStorm.app
 	#editor = /usr/local/bin/webstorm
+[sequence]
+	editor = interactive-rebase-tool

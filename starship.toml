@@ -1,0 +1,14 @@
+[character]
+symbol = "🐈💕"
+
+[directory]
+fish_style_pwd_dir_length = 10
+
+[git_branch]
+symbol = "🏀 "
+
+[nodejs]
+symbol = "⚡ "
+
+[package]
+symbol = "🎉 "

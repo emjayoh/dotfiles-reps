@@ -122,6 +122,10 @@ alias bubble='cd ~/Scripts/Bubble && ./connect.sh'
 alias zz='emacs ~/.zshrc'
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 
+function bubbleMPD () {
+  cd ~/Scripts/Bubble
+  ./connect.sh && mpd --no-daemon --stdout --verbose | lolcat
+}
 # Helpful
 #alias s='cd ~/Sites'
 #alias path='echo -e ${PATH//:/\\n}'
@@ -188,7 +192,7 @@ alias lag="la --git-status"
 ################################
 # MAC OS widget/stats
 #neofetch | lolcat
-neofetch
+neofetch | lolcat
 
 
 # Which plugins would you like to load?
@@ -255,3 +259,25 @@ fi
 #    xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id $wid; done
 #fi
 # }}}
+
+#alias ls='exa' alias ll='exa -l' \ 
+#alias lll='exa -l | less' alias lla='exa -la' \ 
+#alias llt='exa -T' \ 
+#alias llfu='exa -bghHliS --git'
+#alias ls='exa' 
+
+#alias ll='exa -l' 
+ 
+#alias lll='exa -l | less' 
+
+#alias lla='exa -la' 
+ 
+#alias llt='exa -T' 
+ 
+alias llfu='exa -bghHliS --git'
+alias ls='exa' 
+alias ll='exa -l' 
+alias lll='exa -l | less' 
+alias lla='exa -la' 
+alias llt='exa -T'  
+alias llfu='exa -bghHliS --git'

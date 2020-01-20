@@ -5,19 +5,34 @@
 - clean: ['~', '~/.config']
 
 - link:
+    ~/.dotfiles: ''
     ~/.profile:
     ~/.bash_profile:
     ~/.bashrc:
     ~/.chunkwmrc:
     ~/.gitconfig:
     ~/.hyper.js:
+    ~/.emacs:
+    ~/.emacs.d:
+    ~/.gnupg/gpg.conf:
     ~/.skhdrc:
     ~/.spacemacs:
     #~/.ssh/config:
     ~/.zprofile:
+    ~/.zsh:
     ~/.zshrc:
     ~/.zsh_history:
       force: true
+    ~/.config/starship.toml: starship.toml
+    ~/.config/kitty:
+      glob: true
+      path: kitty/*
+    ~/.config/git:
+	glob: true
+	path: git/*
+    ~/.shell:
+    ~/.tmux.conf:
+    
     #~/.config/iterm2: config/iterm2
     #~/.config/base16-shell: config/base16-shell
     #~/.config/kitty: config/kitty
@@ -31,9 +46,9 @@
     #~/.config/neofetch: config/neofetch
     #~/.config/cmus: config/cmus
     #~/.config/configstore: config/configstore
-    ~/.config/:
-      glob: true
-      path: config/*
+    #~/.config/:
+    #  glob: true
+    #  path: config/*
     #~/.history:
     #~/.sentryclirc:
     #~/.Xauthority:
@@ -41,14 +56,24 @@
     #~/.Xresources:
     #~/Passwords.kdbx:
     ~/.ncmpcpp/config: ncmpcpp
-    ~/.mpd/mpd.conf:
+    ~/.mpd/mpd.conf: mpd.conf
     #~/.vscode/settings.json: vscode
     
     
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-
+  #- git submodule sync --recursive
+  # the following have to run after linking ~/.gitconfig
+  #- git update-submodules
+  #- >
+  #  git cleanall -f
+  #  emacs.d/vendor/
+  #  irssi/scripts/vendor/
+  #  jupyter/nbextensions/
+  #  shell/plugins/
+  #  vim/bundle/
+  #  zsh/plugins/
 #- brewfile:
     # This accepts the same options as `brew bundle` command:
     #file: Brewfile
