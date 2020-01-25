@@ -1,0 +1,61 @@
+{
+"workspaces": {
+    "default": "xoxp-267709614259-351628821312-915931453863-189070f9927cf88d355fb96c445244ff",
+    "colors": 256,
+    "theme": "default",
+    "keymap": {
+        "cursor_down": "j",
+        "cursor_left": "h",
+        "cursor_right":"l",
+        "cursor_up": "k",
+        "delete_message": "d",
+        "edit_message": "e",
+        "go_to_chatbox": "c",
+        "go_to_profile": "p",
+        "go_to_sidebar": "esc",
+        "open_quick_switcher": "ctrl k",
+        "quit_application": "q",
+        "set_edit_topic_mode": "t",
+        "set_insert_mode": "i",
+        "toggle_sidebar": "s",
+        "yank_message": "y",
+        "get_permalink": "r",
+        "set_snooze": "ctrl d"
+    },
+    "sidebar": {
+        "width": 25,
+        "max_users": 20
+    },
+    "features": {
+        "emoji": true,
+        "markdown": true,
+        "pictures": true,
+        "browser": "chrome"
+    },
+    "icons": {
+        "block": "\u258C",
+        "block_bottom": "\u2598",
+        "block_top": "\u2596",
+        "channel": "\uF198",
+        "divider": "\uE0B1",
+        "full_divider": "\uE0B0",
+        "edit": "\uF040",
+        "email": "\uF42F",
+        "full_star": "\uF005",
+        "heart": "\uF004",
+        "keyboard": "\uF11C",
+        "line_star": "\uF006",
+        "offline": "\uF10C",
+        "online": "\uF111",
+        "person": "\uF415",
+        "phone": "\uF095",
+        "pin": "\uF435",
+        "private_channel": "\uF023",
+        "skype": "\uF17E",
+        "square": "\uF445",
+        "snooze": "\uF9B1",
+        "status": "\uF075",
+        "timezone": "\uF0AC",
+        "alarm_snooze": "\ufb8c"
+    }
+}

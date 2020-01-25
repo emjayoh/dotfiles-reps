@@ -20,10 +20,12 @@ tap "homebrew/livecheck"
 tap "homebrew/services"
 tap "kentaro-m/md2confl"
 tap "koekeishiya/formulae"
+tap "liamg/aminal"
 tap "mopidy/mopidy"
 tap "mscharley/homebrew"
 tap "rigellute/tap"
 tap "tzvetkoff/extras"
+tap "wtfutil/wtfutil"
 cask "adoptopenjdk8"
 cask "osxfuse"
 cask "xquartz"
@@ -259,6 +261,8 @@ brew "legit"
 brew "lesspipe"
 # Cross-platform Audio Library
 brew "libao"
+# Convert pixel information into colored ASCII art
+brew "libcaca"
 # Light HTTP/1.1 server library
 brew "libmicrohttpd"
 # Library for MPD in the C, C++, and Objective-C languages
@@ -382,6 +386,8 @@ brew "tor"
 brew "transmission-cli"
 # Digital clock in ncurses
 brew "tty-clock"
+# Command-line tool for sharing terminal over the web
+brew "ttyd"
 # Extract, view, and test RAR archives
 brew "unrar"
 # Google's JavaScript engine
@@ -402,6 +408,8 @@ brew "wget"
 brew "wifi-password"
 # Graphical network analyzer and capture tool
 brew "wireshark"
+# The personal information dashboard for your terminal
+brew "wtfutil"
 # Lightweight macOS virtualization solution based on FreeBSD's bhyve
 brew "xhyve"
 # Convert XML to another format (based on XSL or other tools)
@@ -441,6 +449,7 @@ brew "getsentry/tools/sentry-cli"
 brew "kentaro-m/md2confl/md2confl"
 # Simple hotkey-daemon for macOS.
 brew "koekeishiya/formulae/skhd", args: ["HEAD", "with-logging"]
+brew "liamg/aminal/aminal"
 # Mopidy extension for playing music from your music archive
 brew "mopidy/mopidy/mopidy-local"
 # Mopidy extension for controlling Mopidy from MPD clients
@@ -478,6 +487,7 @@ cask "commander-one"
 cask "dash"
 cask "dat"
 cask "dozer"
+cask "dropbox"
 cask "electric-sheep"
 cask "epic"
 cask "etcher"
@@ -570,6 +580,7 @@ cask "rocket"
 cask "serviio"
 cask "servpane"
 cask "sketch"
+cask "slack"
 cask "sonos"
 cask "soulseek"
 cask "soundflower"
@@ -608,9 +619,7 @@ cask "zoomus"
 cask "zotero"
 mas "Amphetamine", id: 937984704
 mas "Flycut", id: 442160987
-mas "iMovie", id: 408981434
 mas "Microsoft Remote Desktop", id: 1295203466
-mas "OneHighlighter", id: 1131580917
 mas "Paper", id: 1143513744
 mas "Plash", id: 1494023538
 mas "Remote Desktop - VNC", id: 472995993
