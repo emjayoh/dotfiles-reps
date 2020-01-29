@@ -169,6 +169,8 @@ brew "fortune"
 brew "ghostscript"
 # Highest-quality GIF encoder based on pngquant
 brew "gifski"
+# Command-line utility for uploading Gists
+brew "gist"
 # Perl compatible regular expressions library with a new API
 brew "pcre2"
 # Distributed revision control system
@@ -213,8 +215,6 @@ brew "graphicsmagick"
 brew "gst-libav"
 # GStreamer plugins (well-supported, under the LGPL)
 brew "gst-plugins-good"
-# Library for constructing graphs of media-handling components
-brew "gst-plugins-ugly"
 # Python overrides for gobject-introspection-based pygst bindings
 brew "gst-python"
 # GNOME XML library
@@ -605,7 +605,7 @@ cask "virtualbox-extension-pack"
 cask "visual-studio-code"
 cask "vivaldi"
 cask "vivaldi-snapshot"
-cask "vlc-nightly"
+cask "vlc"
 cask "webpquicklook"
 cask "webstorm"
 cask "whatsapp"

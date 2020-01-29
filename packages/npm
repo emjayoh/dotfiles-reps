@@ -9,6 +9,7 @@
 ├── npm@6.13.4
 ├── npm-run-all@4.1.5
 ├── react-devtools@4.3.0
+├── serverless@1.61.3
 ├── shelljs@0.8.3
 ├── tldr@3.3.2
 └── vtop@0.6.1
