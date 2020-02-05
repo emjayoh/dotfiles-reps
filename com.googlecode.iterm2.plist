@@ -8,6 +8,8 @@
 	<true/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
+	<key>ApplePressAndHoldEnabled</key>
+	<false/>
 	<key>AppleScrollAnimationEnabled</key>
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
@@ -1201,7 +1203,7 @@
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>641 579 400 129 0 0 1680 1050 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>530 511 620 392 0 0 1680 1050 </string>
+	<string>530 493 620 392 0 0 1680 1050 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>179 230 606 469 0 0 1680 1050 </string>
 	<key>NSWindow Frame SharedPreferences</key>
@@ -1215,7 +1217,7 @@
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 665 570 385 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 616 650 434 0 0 1680 1050 </string>
+	<string>0 665 570 385 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>960 579 640 471 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -3557,26 +3559,27 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
+		<string>3.3.7</string>
 		<string>3.3.3beta1</string>
 		<string>3.3.8beta3</string>
-		<string>3.3.0beta10</string>
 		<string>3.3.5beta2</string>
-		<string>3.3.0beta11</string>
 		<string>3.3.2beta1</string>
-		<string>3.3.0beta12</string>
-		<string>3.3.0beta13</string>
 		<string>3.3.1beta1</string>
 		<string>3.3.8beta2</string>
-		<string>3.3.0beta15</string>
 		<string>3.3.3beta2</string>
-		<string>3.3.0beta16</string>
 		<string>3.3.5beta1</string>
+		<string>3.3.0beta16</string>
+		<string>3.3.0beta15</string>
 		<string>3.3.6</string>
+		<string>3.3.0beta13</string>
+		<string>3.3.0beta12</string>
+		<string>3.3.0beta11</string>
+		<string>3.3.0beta10</string>
 		<string>3.3.8beta4</string>
 		<string>3.3.4beta1</string>
 		<string>3.3.2beta2</string>
 		<string>3.3.8beta1</string>
-		<string>3.3.7</string>
+		<string>3.3.8beta5</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
@@ -3599,7 +3602,7 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1680, 1050}}</string>
 		<key>topLeft</key>
-		<string>{633, 725}</string>
+		<string>{632, 726}</string>
 	</dict>
 	<key>NoSyncHaveUsedCopyMode</key>
 	<true/>
@@ -3610,7 +3613,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>599711349.69605899</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>188</integer>
+	<integer>197</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -4434,7 +4437,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-01-20T10:21:04Z</date>
+	<date>2020-02-05T01:11:35Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -8474,7 +8477,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.8beta4</string>
+	<string>3.3.8beta5</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
